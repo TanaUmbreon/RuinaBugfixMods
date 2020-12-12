@@ -62,7 +62,7 @@
       <summary></summary>
     </member>
     <member name="F:BattleDiceBehavior.card">
-      <summary></summary>
+      <summary>このバトル ダイスを所有するバトル ページ</summary>
     </member>
     <member name="F:BattleDiceBehavior.destroyedTiming">
       <summary></summary>
@@ -98,8 +98,8 @@
       <param name="flag"></param>
     </member>
     <member name="M:BattleDiceBehavior.ApplyDiceStatBonus(DiceStatBonus)">
-      <summary></summary>
-      <param name="bonus"></param>
+      <summary>指定したボーナス値をバトル ダイスに適用します。</summary>
+      <param name="bonus">バトル ダイスに適用するボーナス値。</param>
     </member>
     <member name="M:BattleDiceBehavior.BeforeRollDice(BattleDiceBehavior)">
       <summary></summary>
@@ -221,6 +221,201 @@
       <summary></summary>
     </member>
     <member name="P:BattleDiceBehavior.Type">
+      <summary></summary>
+    </member>
+    <member name="T:BattleDiceCardModel">
+      <summary>バトル ページを表します。</summary>
+    </member>
+    <member name="F:BattleDiceCardModel.exhaust">
+      <summary></summary>
+    </member>
+    <member name="F:BattleDiceCardModel.owner">
+      <summary></summary>
+    </member>
+    <member name="F:BattleDiceCardModel.temporary">
+      <summary></summary>
+    </member>
+    <member name="M:BattleDiceCardModel.#ctor">
+      <summary></summary>
+    </member>
+    <member name="M:BattleDiceCardModel.AddBuf(BattleDiceCardBuf)">
+      <summary></summary>
+      <param name="buf"></param>
+    </member>
+    <member name="M:BattleDiceCardModel.AddBufWithoutDuplication(BattleDiceCardBuf)">
+      <summary></summary>
+      <param name="buf"></param>
+    </member>
+    <member name="M:BattleDiceCardModel.AddCoolTime(System.Single)">
+      <summary></summary>
+      <param name="value"></param>
+    </member>
+    <member name="M:BattleDiceCardModel.AddCost(System.Int32)">
+      <summary></summary>
+      <param name="cost"></param>
+    </member>
+    <member name="M:BattleDiceCardModel.CanAddedEgoCard">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceCardModel.ChangeFarToNearForMyo">
+      <summary></summary>
+    </member>
+    <member name="M:BattleDiceCardModel.CheckDestroyedBuf">
+      <summary></summary>
+    </member>
+    <member name="M:BattleDiceCardModel.CopySelf">
+      <summary></summary>
+    </member>
+    <member name="M:BattleDiceCardModel.CreateDiceCardBehaviorList">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceCardModel.CreateDiceCardSelfAbilityScript">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceCardModel.CreatePlayingCard(LOR_DiceSystem.DiceCardXmlInfo)">
+      <summary></summary>
+      <param name="cardInfo"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceCardModel.GetAddedIcon(System.Int32)">
+      <summary></summary>
+      <param name="idx"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceCardModel.GetArtworkSrc">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceCardModel.GetBehaviourList">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceCardModel.GetBufList">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceCardModel.GetBufWithMostPriority">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceCardModel.GetCategory">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceCardModel.GetCost">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceCardModel.GetGrade">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceCardModel.GetID">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceCardModel.GetMap">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceCardModel.GetName">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceCardModel.GetOriginCost">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceCardModel.GetPriority">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceCardModel.GetRarity">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceCardModel.GetSkin">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceCardModel.GetSpec">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceCardModel.OnAddKeywordBufByCard(BattleUnitBuf,System.Int32)">
+      <summary></summary>
+      <param name="targetBuf"></param>
+      <param name="stack"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceCardModel.OnGiveKeywordBufByCard(BattleUnitBuf,System.Int32,BattleUnitModel)">
+      <summary></summary>
+      <param name="targetBuf"></param>
+      <param name="stack"></param>
+      <param name="target"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceCardModel.OnRoundEnd">
+      <summary></summary>
+    </member>
+    <member name="M:BattleDiceCardModel.OnRoundStart">
+      <summary></summary>
+    </member>
+    <member name="M:BattleDiceCardModel.OnUseCard(BattleUnitModel)">
+      <summary></summary>
+      <param name="owner"></param>
+    </member>
+    <member name="M:BattleDiceCardModel.RemoveAddedIcon(System.String,System.Int32)">
+      <summary></summary>
+      <param name="resName"></param>
+      <param name="priority"></param>
+    </member>
+    <member name="M:BattleDiceCardModel.RemoveBuf(BattleDiceCardBuf)">
+      <summary></summary>
+      <param name="buf"></param>
+    </member>
+    <member name="M:BattleDiceCardModel.ReserveExhaust">
+      <summary></summary>
+    </member>
+    <member name="M:BattleDiceCardModel.ResetCoolTime">
+      <summary></summary>
+    </member>
+    <member name="M:BattleDiceCardModel.ResetToOriginalData">
+      <summary></summary>
+    </member>
+    <member name="M:BattleDiceCardModel.SetAddedIcon(System.String,System.Int32)">
+      <summary></summary>
+      <param name="resName"></param>
+      <param name="priority"></param>
+    </member>
+    <member name="M:BattleDiceCardModel.SetCurrentCost(System.Int32)">
+      <summary></summary>
+      <param name="cost"></param>
+    </member>
+    <member name="M:BattleDiceCardModel.SetCurrentCostMax">
+      <summary></summary>
+    </member>
+    <member name="M:BattleDiceCardModel.SetMaxCooltime(System.Int32)">
+      <summary></summary>
+      <param name="unitcount"></param>
+    </member>
+    <member name="M:BattleDiceCardModel.SetPriorityAdder(System.Int32)">
+      <summary></summary>
+      <param name="v"></param>
+    </member>
+    <member name="P:BattleDiceCardModel.CurCost">
+      <summary></summary>
+    </member>
+    <member name="P:BattleDiceCardModel.CurrentCooltimeValue">
+      <summary></summary>
+    </member>
+    <member name="P:BattleDiceCardModel.MaxCooltimeValue">
+      <summary></summary>
+    </member>
+    <member name="P:BattleDiceCardModel.XmlData">
       <summary></summary>
     </member>
     <member name="T:BattleUnitBuf">
@@ -445,7 +640,7 @@
       <summary></summary>
     </member>
     <member name="M:BattleUnitBuf.OnRoundStart">
-      <summary></summary>
+      <summary>幕の開始時に呼び出されます。</summary>
     </member>
     <member name="M:BattleUnitBuf.OnRoundStartAfter">
       <summary></summary>
@@ -820,7 +1015,7 @@
       <returns></returns>
     </member>
     <member name="T:BattleUnitModel">
-      <summary></summary>
+      <summary>バトル キャラクターを表します。</summary>
     </member>
     <member name="F:BattleUnitModel.aggroDetail">
       <summary></summary>
@@ -835,7 +1030,7 @@
       <summary></summary>
     </member>
     <member name="F:BattleUnitModel.bufListDetail">
-      <summary></summary>
+      <summary>付与されたバフの一覧</summary>
     </member>
     <member name="F:BattleUnitModel.cardHistory">
       <summary></summary>
@@ -874,7 +1069,7 @@
       <summary></summary>
     </member>
     <member name="F:BattleUnitModel.hp">
-      <summary></summary>
+      <summary>現在体力</summary>
     </member>
     <member name="F:BattleUnitModel.ignoreBloodyEffect">
       <summary></summary>
@@ -1076,8 +1271,8 @@
       <returns></returns>
     </member>
     <member name="M:BattleUnitModel.IsBreakLifeZero">
-      <summary></summary>
-      <returns></returns>
+      <summary>混乱耐性がゼロである事を示します。</summary>
+      <returns>混乱耐性がゼロの場合は true、そうでない場合は false。</returns>
     </member>
     <member name="M:BattleUnitModel.IsControlable">
       <summary></summary>
@@ -1333,8 +1528,8 @@
       <param name="v"></param>
     </member>
     <member name="M:BattleUnitModel.RecoverHP(System.Int32)">
-      <summary></summary>
-      <param name="v"></param>
+      <summary>指定した値だけキャラクターの体力を回復します。</summary>
+      <param name="v">回復する体力の数値。</param>
     </member>
     <member name="M:BattleUnitModel.ResetBreakGauge">
       <summary></summary>
@@ -1391,11 +1586,11 @@
       <param name="atkResist"></param>
     </member>
     <member name="M:BattleUnitModel.TakeDamage(System.Int32,BattleUnitModel,System.Boolean)">
-      <summary></summary>
-      <param name="v"></param>
-      <param name="attacker"></param>
+      <summary>指定した値だけダメージを受けます。</summary>
+      <param name="v">ダメージ量。</param>
+      <param name="attacker">攻撃を行ったキャラクター。</param>
       <param name="isAdditionalDmg"></param>
-      <returns></returns>
+      <returns>実際に受けたダメージ量。</returns>
     </member>
     <member name="M:BattleUnitModel.TeamKill">
       <summary></summary>
@@ -1427,10 +1622,10 @@
       <summary></summary>
     </member>
     <member name="P:BattleUnitModel.MaxBreakLife">
-      <summary></summary>
+      <summary>最大混乱耐性を取得します。</summary>
     </member>
     <member name="P:BattleUnitModel.MaxHp">
-      <summary></summary>
+      <summary>最大体力を取得します。</summary>
     </member>
     <member name="P:BattleUnitModel.MaxPlayPoint">
       <summary></summary>
@@ -1479,6 +1674,7 @@
       <returns></returns>
     </member>
     <member name="T:DiceCardAbilityBase">
+      <summary>バトル ページのバトル ダイスに付与された効果を表す基底クラスです。全てのバトル ダイス効果はこのクラスを派生して実装されます。</summary>
       <summary></summary>
     </member>
     <member name="F:DiceCardAbilityBase.behavior">
@@ -1561,13 +1757,13 @@
       <summary></summary>
     </member>
     <member name="P:DiceCardAbilityBase.Keywords">
-      <summary></summary>
+      <summary>ヘルプ メッセージ用のキーワードを取得します。</summary>
     </member>
     <member name="P:DiceCardAbilityBase.owner">
       <summary></summary>
     </member>
     <member name="T:DiceCardSelfAbilityBase">
-      <summary></summary>
+      <summary>バトル ページそのものに付与された効果を表す基底クラスです。全てのバトル ページ効果はこのクラスを派生して実装されます。</summary>
     </member>
     <member name="F:DiceCardSelfAbilityBase.card">
       <summary></summary>
@@ -1649,16 +1845,59 @@
       <summary></summary>
     </member>
     <member name="M:DiceCardSelfAbilityBase.OnUseCard">
-      <summary></summary>
+      <summary>バトル ページが使用された時に呼び出されます。</summary>
     </member>
     <member name="M:DiceCardSelfAbilityBase.OnUseCardEvent">
       <summary></summary>
     </member>
     <member name="P:DiceCardSelfAbilityBase.Keywords">
-      <summary></summary>
+      <summary>ヘルプ メッセージ用のキーワードを取得します。</summary>
     </member>
     <member name="P:DiceCardSelfAbilityBase.owner">
+      <summary>このバトル ページ効果を持つバトル ページの所有キャラクターを取得します。</summary>
+    </member>
+    <member name="T:DiceStatBonus">
+      <summary>バトル ダイスに付与するボーナス値を表します。</summary>
+    </member>
+    <member name="F:DiceStatBonus.breakDmg">
+      <summary>混乱ダメージ</summary>
+    </member>
+    <member name="F:DiceStatBonus.breakRate">
       <summary></summary>
+    </member>
+    <member name="F:DiceStatBonus.dmg">
+      <summary>ダメージ</summary>
+    </member>
+    <member name="F:DiceStatBonus.dmgRate">
+      <summary></summary>
+    </member>
+    <member name="F:DiceStatBonus.face">
+      <summary></summary>
+    </member>
+    <member name="F:DiceStatBonus.guardBreakAdder">
+      <summary></summary>
+    </member>
+    <member name="F:DiceStatBonus.guardBreakMultiplier">
+      <summary></summary>
+    </member>
+    <member name="F:DiceStatBonus.ignorePower">
+      <summary></summary>
+    </member>
+    <member name="F:DiceStatBonus.max">
+      <summary></summary>
+    </member>
+    <member name="F:DiceStatBonus.min">
+      <summary></summary>
+    </member>
+    <member name="F:DiceStatBonus.power">
+      <summary>ダイス威力</summary>
+    </member>
+    <member name="M:DiceStatBonus.#ctor">
+      <summary><see cref="DiceStatBonus"/> の新しいインスタンスを生成します。</summary>
+    </member>
+    <member name="M:DiceStatBonus.Copy">
+      <summary>このインスタンスのディープ コピーを作成して返します。</summary>
+      <returns></returns>
     </member>
     <member name="T:GiftInventory">
       <summary>戦闘表象のインベントリです。このオブジェクトは保存可能です。</summary>
@@ -1929,6 +2168,24 @@
     </member>
     <member name="F:KeywordBuf.Weak">
       <summary>虚弱 (今回の幕の間、攻撃ダイスの威力 -X)</summary>
+    </member>
+    <member name="T:LOR_DiceSystem.CardRange">
+      <summary>バトル ページの攻撃範囲を表します。</summary>
+    </member>
+    <member name="F:LOR_DiceSystem.CardRange.Far">
+      <summary>遠距離攻撃</summary>
+    </member>
+    <member name="F:LOR_DiceSystem.CardRange.FarArea">
+      <summary>広域攻撃</summary>
+    </member>
+    <member name="F:LOR_DiceSystem.CardRange.FarAreaEach">
+      <summary>個別広域攻撃</summary>
+    </member>
+    <member name="F:LOR_DiceSystem.CardRange.Near">
+      <summary>接近攻撃</summary>
+    </member>
+    <member name="F:LOR_DiceSystem.CardRange.Special">
+      <summary>特殊攻撃</summary>
     </member>
     <member name="T:PassiveAbilityBase">
       <summary>パッシブの基底クラスです。全てのパッシブはこのクラスを派生して実装されます。</summary>
