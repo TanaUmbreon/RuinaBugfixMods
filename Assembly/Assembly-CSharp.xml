@@ -5,31 +5,31 @@
   </assembly>
   <members>
     <member name="T:AtkResist">
-      <summary></summary>
+      <summary>属性耐性を表します。</summary>
     </member>
     <member name="F:AtkResist.Endure">
-      <summary></summary>
+      <summary>耐性 (0.25倍)</summary>
     </member>
     <member name="F:AtkResist.Immune">
-      <summary></summary>
+      <summary>免疫</summary>
     </member>
     <member name="F:AtkResist.None">
-      <summary></summary>
+      <summary>未定義</summary>
     </member>
     <member name="F:AtkResist.Normal">
-      <summary></summary>
+      <summary>普通 (1倍)</summary>
     </member>
     <member name="F:AtkResist.Resist">
-      <summary></summary>
+      <summary>抵抗 (0.5倍)</summary>
     </member>
     <member name="F:AtkResist.Vulnerable">
-      <summary></summary>
+      <summary>脆弱 (2倍)</summary>
     </member>
     <member name="F:AtkResist.Weak">
-      <summary></summary>
+      <summary>弱点 (1.5倍)</summary>
     </member>
     <member name="T:BattleDiceBehavior">
-      <summary></summary>
+      <summary>バトル ダイスの振る舞いを操作する機能を提供します。</summary>
     </member>
     <member name="F:BattleDiceBehavior._damageReductionByGuard">
       <summary></summary>
@@ -139,8 +139,8 @@
       <returns></returns>
     </member>
     <member name="M:BattleDiceBehavior.IsParrying">
-      <summary></summary>
-      <returns></returns>
+      <summary>マッチ状態であることを示します。</summary>
+      <returns>マッチ状態の場合は true、そうでない場合は false。</returns>
     </member>
     <member name="M:BattleDiceBehavior.OnEventDiceAbility(DiceCardAbilityBase.DiceCardPassiveType,BattleUnitModel)">
       <summary></summary>
@@ -224,10 +224,10 @@
       <summary></summary>
     </member>
     <member name="T:BattleUnitBuf">
-      <summary></summary>
+      <summary>キャラクターに付与するバフを表します。</summary>
     </member>
     <member name="F:BattleUnitBuf._owner">
-      <summary></summary>
+      <summary>バフの所有キャラクター</summary>
     </member>
     <member name="F:BattleUnitBuf.hide">
       <summary></summary>
@@ -497,10 +497,10 @@
       <summary></summary>
     </member>
     <member name="P:BattleUnitBuf.keywordIconId">
-      <summary></summary>
+      <summary>アイコン表示用のキーワードを取得します。</summary>
     </member>
     <member name="P:BattleUnitBuf.keywordId">
-      <summary></summary>
+      <summary>ヘルプ メッセージ用のキーワードを取得します。</summary>
     </member>
     <member name="P:BattleUnitBuf.paramInBufDesc">
       <summary></summary>
@@ -509,15 +509,15 @@
       <summary></summary>
     </member>
     <member name="T:BattleUnitBufListDetail">
-      <summary></summary>
+      <summary>キャラクターに付与されたバフの一覧を表します。</summary>
     </member>
     <member name="M:BattleUnitBufListDetail.#ctor(BattleUnitModel)">
       <summary></summary>
       <param name="model"></param>
     </member>
     <member name="M:BattleUnitBufListDetail.AddBuf(BattleUnitBuf)">
-      <summary></summary>
-      <param name="buf"></param>
+      <summary>指定したバフをこの幕から付与します。</summary>
+      <param name="buf">付与するバフ。</param>
     </member>
     <member name="M:BattleUnitBufListDetail.AddBufWithConnection(BattleUnitBuf,BattleUnitModel)">
       <summary></summary>
@@ -529,32 +529,32 @@
       <param name="buf"></param>
     </member>
     <member name="M:BattleUnitBufListDetail.AddKeywordBufByCard(KeywordBuf,System.Int32,BattleUnitModel)">
-      <summary></summary>
-      <param name="bufType"></param>
-      <param name="stack"></param>
-      <param name="actor"></param>
+      <summary>指定したバフを次の幕から付与します。このメソッドはバトル ページの効果により付与する場合に呼び出します。</summary>
+      <param name="bufType">付与するバフのキーワード。</param>
+      <param name="stack">付与するバフの数値。</param>
+      <param name="actor">バフを付与したキャラクター。キャラクター以外による付与、または規定値は null。</param>
     </member>
     <member name="M:BattleUnitBufListDetail.AddKeywordBufByEtc(KeywordBuf,System.Int32,BattleUnitModel)">
-      <summary></summary>
-      <param name="bufType"></param>
-      <param name="stack"></param>
-      <param name="actor"></param>
+      <summary>指定したバフを次の幕から付与します。このメソッドはバトル ページ以外の効果により付与する場合に呼び出します。</summary>
+      <param name="bufType">付与するバフのキーワード。</param>
+      <param name="stack">付与するバフの数値。</param>
+      <param name="actor">バフを付与したキャラクター。キャラクター以外による付与、または規定値は null。</param>
     </member>
     <member name="M:BattleUnitBufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf,System.Int32,BattleUnitModel)">
-      <summary></summary>
-      <param name="bufType"></param>
-      <param name="stack"></param>
-      <param name="actor"></param>
+      <summary>指定したバフをこの幕から付与します。このメソッドはバトル ページの効果により付与する場合に呼び出します。</summary>
+      <param name="bufType">付与するバフのキーワード。</param>
+      <param name="stack">付与するバフの数値。</param>
+      <param name="actor">バフを付与したキャラクター。キャラクター以外による付与、または規定値は null。</param>
     </member>
     <member name="M:BattleUnitBufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf,System.Int32,BattleUnitModel)">
-      <summary></summary>
-      <param name="bufType"></param>
-      <param name="stack"></param>
-      <param name="actor"></param>
+      <summary>指定したバフをこの幕から付与します。このメソッドはバトル ページ以外の効果により付与する場合に呼び出します。</summary>
+      <param name="bufType">付与するバフのキーワード。</param>
+      <param name="stack">付与するバフの数値。</param>
+      <param name="actor">バフを付与したキャラクター。キャラクター以外による付与、または規定値は null。</param>
     </member>
     <member name="M:BattleUnitBufListDetail.AddReadyBuf(BattleUnitBuf)">
-      <summary></summary>
-      <param name="buf"></param>
+      <summary>指定したバフを次の幕から付与します。</summary>
+      <param name="buf">付与するバフ。</param>
     </member>
     <member name="M:BattleUnitBufListDetail.AfterDiceAction(BattleDiceBehavior)">
       <summary></summary>
@@ -784,9 +784,9 @@
       <param name="behavior"></param>
     </member>
     <member name="M:BattleUnitBufListDetail.OnTakeDamageByAttack(BattleDiceBehavior,System.Int32)">
-      <summary></summary>
-      <param name="atkDice"></param>
-      <param name="dmg"></param>
+      <summary>攻撃によりダメージを受ける直前に呼び出されます。</summary>
+      <param name="atkDice">攻撃に使用されているバトル ダイスに対するビヘイビア (振る舞いを操作するオブジェクト)。</param>
+      <param name="dmg">受けるダメージ量。</param>
     </member>
     <member name="M:BattleUnitBufListDetail.OnUseCard(BattlePlayingCardDataInUnitModel)">
       <summary></summary>
@@ -1757,25 +1757,25 @@
       <returns>装備から外した場合は true、既に外していたまたは外せなかった場合は false を返します。</returns>
     </member>
     <member name="T:KeywordBuf">
-      <summary></summary>
+      <summary>キーワード定義されたバフを表します。</summary>
     </member>
     <member name="F:KeywordBuf.AllPowerUp">
-      <summary></summary>
+      <summary>威力増加 (全てのダイスの威力を X 増加)</summary>
     </member>
     <member name="F:KeywordBuf.Binding">
-      <summary></summary>
+      <summary>束縛 (今回の幕において、速度の値が X 減少。)</summary>
     </member>
     <member name="F:KeywordBuf.Bleeding">
-      <summary></summary>
+      <summary>出血 (今回の幕の間、攻撃ダイスを振るたびに X ダメージを受けて出血値が 2/3 に減少する)</summary>
     </member>
     <member name="F:KeywordBuf.BloodStackBlock">
       <summary></summary>
     </member>
     <member name="F:KeywordBuf.Blurry">
-      <summary></summary>
+      <summary>朦朧 (朦朧ではない他の対象がいる場合、このキャラクターを相手に選べない。幕の終了時に解除される)</summary>
     </member>
     <member name="F:KeywordBuf.Burn">
-      <summary></summary>
+      <summary>火傷 (幕の終了時、X ダメージを受け、火傷の数値が 2/3 に減少する。(小数点切り捨て))</summary>
     </member>
     <member name="F:KeywordBuf.BurnBreak">
       <summary></summary>
@@ -1784,7 +1784,7 @@
       <summary></summary>
     </member>
     <member name="F:KeywordBuf.CB_BigBadWolf_Stealth">
-      <summary></summary>
+      <summary>影 (狼が使用するバトル ページの対象でない司書は行動不能)</summary>
     </member>
     <member name="F:KeywordBuf.CB_BlackSwanDeadBro">
       <summary></summary>
@@ -1799,19 +1799,19 @@
       <summary></summary>
     </member>
     <member name="F:KeywordBuf.Decay">
-      <summary></summary>
+      <summary>腐食 (幕の終了時、X ダメージを受けて数値が1減少する。(被ダメージ時、腐食の数だけ物理・混乱追加ダメージを受ける))</summary>
     </member>
     <member name="F:KeywordBuf.DecreaseSpeedTo1">
-      <summary></summary>
+      <summary>速度固定1 (今回の幕の間、速度ダイスの値を1に固定)</summary>
     </member>
     <member name="F:KeywordBuf.Disarm">
-      <summary></summary>
+      <summary>武装解除 (今回の幕の間、守備ダイスの威力 -X)</summary>
     </member>
     <member name="F:KeywordBuf.DmgUp">
-      <summary></summary>
+      <summary>ダメージ量増加 (今回の幕の間、攻撃ダイスのダメージ量 +X)</summary>
     </member>
     <member name="F:KeywordBuf.Endurance">
-      <summary></summary>
+      <summary>忍耐 (今回の幕の間、守備ダイスの威力 +X)</summary>
     </member>
     <member name="F:KeywordBuf.Fairy">
       <summary></summary>
@@ -1820,31 +1820,31 @@
       <summary></summary>
     </member>
     <member name="F:KeywordBuf.HitPowerUp">
-      <summary></summary>
+      <summary>打撃威力増加 (今回の幕の間、打撃威力 +X)</summary>
     </member>
     <member name="F:KeywordBuf.IndexRelease">
-      <summary></summary>
+      <summary>解禁 (全てのダイス威力 +1)</summary>
     </member>
     <member name="F:KeywordBuf.KnightOfDespairBlessing">
       <summary></summary>
     </member>
     <member name="F:KeywordBuf.None">
-      <summary></summary>
+      <summary>バフなし</summary>
     </member>
     <member name="F:KeywordBuf.NullifyPower">
-      <summary></summary>
+      <summary>威力無効化 (今回の幕の間、威力の影響を受けない)</summary>
     </member>
     <member name="F:KeywordBuf.OldLady">
       <summary></summary>
     </member>
     <member name="F:KeywordBuf.Paralysis">
-      <summary></summary>
+      <summary>麻痺 (今回の幕の間、カード使用時のダイスを最大 X 個まで弱体化する)</summary>
     </member>
     <member name="F:KeywordBuf.PenetratePowerUp">
-      <summary></summary>
+      <summary>貫通威力増加 (今回の幕の間、貫通威力 +X)</summary>
     </member>
     <member name="F:KeywordBuf.Protection">
-      <summary></summary>
+      <summary>保護 (今回の幕の間、攻撃によって受けるダメージ量が X 減少)</summary>
     </member>
     <member name="F:KeywordBuf.QueenOfHatredHatred">
       <summary></summary>
@@ -1853,13 +1853,13 @@
       <summary></summary>
     </member>
     <member name="F:KeywordBuf.Quickness">
-      <summary></summary>
+      <summary>クイック (今回の幕において、速度の値が X 増加)</summary>
     </member>
     <member name="F:KeywordBuf.RedMist">
-      <summary></summary>
+      <summary>赤い霧 (全てのダイス威力 +X。最大で 5 まで得られる)</summary>
     </member>
     <member name="F:KeywordBuf.RedMistEgo">
-      <summary></summary>
+      <summary>E.G.O発現 (「大切断-縦」が使用可能に。全てのダイス威力が 2 増加。毎幕ごとに 40 ダメージ以上与えられない場合、混乱ダメージを受ける。混乱状態になると「E.G.O発現」状態が解除される)</summary>
     </member>
     <member name="F:KeywordBuf.RedShoes">
       <summary></summary>
@@ -1880,10 +1880,10 @@
       <summary></summary>
     </member>
     <member name="F:KeywordBuf.SlashPowerUp">
-      <summary></summary>
+      <summary>斬撃威力増加 (今回の幕の間、斬撃威力 +X)</summary>
     </member>
     <member name="F:KeywordBuf.Smoke">
-      <summary></summary>
+      <summary>煙 (受けるダメージ量 X% 増加。最大 10 まで得ることができる。煙の数値が 9 以上ならすべてのダイス威力 +1。幕の終了時に煙の数値が 1 減少)</summary>
     </member>
     <member name="F:KeywordBuf.SnowQueenPower">
       <summary></summary>
@@ -1892,10 +1892,10 @@
       <summary></summary>
     </member>
     <member name="F:KeywordBuf.Strength">
-      <summary></summary>
+      <summary>パワー (今回の幕の間、攻撃ダイスの威力 +X)</summary>
     </member>
     <member name="F:KeywordBuf.Stun">
-      <summary></summary>
+      <summary>行動不能 (今回の幕の間、行動できない)</summary>
     </member>
     <member name="F:KeywordBuf.SweeperDup">
       <summary></summary>
@@ -1907,7 +1907,7 @@
       <summary></summary>
     </member>
     <member name="F:KeywordBuf.TeddyLove">
-      <summary></summary>
+      <summary>愛情 (この対象を攻撃するとき、現在の値だけ攻撃者の威力を増加)</summary>
     </member>
     <member name="F:KeywordBuf.UniverseCardBuf">
       <summary></summary>
@@ -1916,19 +1916,19 @@
       <summary></summary>
     </member>
     <member name="F:KeywordBuf.Vibrate">
-      <summary></summary>
+      <summary>振動 (???)</summary>
     </member>
     <member name="F:KeywordBuf.Vulnerable">
-      <summary></summary>
+      <summary>脆弱 (今回の幕の間、攻撃によって受けるダメージ量が X 増加)</summary>
     </member>
     <member name="F:KeywordBuf.Vulnerable_break">
       <summary></summary>
     </member>
     <member name="F:KeywordBuf.WarpCharge">
-      <summary></summary>
+      <summary>充電 (充電の数値によって特定バトルページの能力が上昇。最大 10 まで獲得可能)</summary>
     </member>
     <member name="F:KeywordBuf.Weak">
-      <summary></summary>
+      <summary>虚弱 (今回の幕の間、攻撃ダイスの威力 -X)</summary>
     </member>
     <member name="T:PassiveAbilityBase">
       <summary>パッシブの基底クラスです。全てのパッシブはこのクラスを派生して実装されます。</summary>
@@ -1952,7 +1952,7 @@
       <summary></summary>
     </member>
     <member name="F:PassiveAbilityBase.owner">
-      <summary>パッシブ所有者</summary>
+      <summary>パッシブの所有キャラクター</summary>
     </member>
     <member name="F:PassiveAbilityBase.rare">
       <summary></summary>
@@ -2134,8 +2134,8 @@
       <summary></summary>
     </member>
     <member name="M:PassiveAbilityBase.OnDieOtherUnit(BattleUnitModel)">
-      <summary>このパッシブ所有者以外のユニット (敵味方を問わず) が死亡した場合に呼び出されます。</summary>
-      <param name="unit">死亡したユニット。</param>
+      <summary>このパッシブの所有キャラクター以外のキャラクターが敵味方を問わず死亡した場合に呼び出されます。</summary>
+      <param name="unit">死亡したキャラクター。</param>
     </member>
     <member name="M:PassiveAbilityBase.OnDiscardByAbility(System.Collections.Generic.List{BattleDiceCardModel})">
       <summary></summary>
@@ -2312,40 +2312,40 @@
       <summary></summary>
     </member>
     <member name="P:PassiveAbilityBase.isTargetable">
-      <summary>このパッシブ所有者にターゲット可能である事を示す値を取得します。</summary>
+      <summary>このパッシブの所有キャラクターにターゲット可能である事を示す値を取得します。</summary>
     </member>
     <member name="T:RandomUtil">
-      <summary></summary>
+      <summary>乱数操作を行うユーティリティ クラスです。</summary>
     </member>
     <member name="F:RandomUtil.randomValue">
-      <summary></summary>
+      <summary>.NET Framework に内包された乱数生成オブジェクト</summary>
     </member>
     <member name="M:RandomUtil.#ctor">
       <summary></summary>
     </member>
     <member name="M:RandomUtil.Range(System.Int32,System.Int32)">
-      <summary></summary>
-      <param name="min"></param>
-      <param name="max"></param>
-      <returns></returns>
+      <summary>指定した範囲内のランダムな整数を返します。</summary>
+      <param name="min">返される乱数の下限値。この数値は乱数に含まれます。</param>
+      <param name="max">返される乱数の上限値。この数値は乱数に含まれます。</param>
+      <returns><paramref name="min"/> 以上 <paramref name="max"/> 以下の 32 ビット符号付整数。</returns>
     </member>
     <member name="M:RandomUtil.RangeFloat(System.Single,System.Single)">
-      <summary></summary>
-      <param name="min"></param>
-      <param name="max"></param>
-      <returns></returns>
+      <summary>指定した範囲内のランダムな実数を返します。</summary>
+      <param name="min">返される乱数の下限値。この数値は乱数に含まれます。</param>
+      <param name="max">返される乱数の上限値。この数値は乱数に含まれます。</param>
+      <returns><paramref name="min"/> 以上 <paramref name="max"/> 以下の単精度浮動小数点数。</returns>
     </member>
     <member name="M:RandomUtil.SelectOne``1()">
-      <summary></summary>
-      <typeparam name="T"></typeparam>
-      <param name="list"></param>
-      <returns></returns>
+      <summary>指定した配列リストからランダムに要素を一つ選択して返します。</summary>
+      <typeparam name="T">配列リストの要素の型。</typeparam>
+      <param name="list">選択対象となる配列リスト。</param>
+      <returns><paramref name="list"/> に含まれている要素。</returns>
     </member>
     <member name="M:RandomUtil.SelectOne``1(System.Collections.Generic.List{``0})">
-      <summary></summary>
-      <typeparam name="T"></typeparam>
-      <param name="list"></param>
-      <returns></returns>
+      <summary>指定したリストからランダムに要素を一つ選択して返します。</summary>
+      <typeparam name="T">リストの要素の型。</typeparam>
+      <param name="list">選択対象となるリスト。</param>
+      <returns><paramref name="list"/> に含まれている要素。</returns>
     </member>
     <member name="M:RandomUtil.SelectOne``1(,System.Single[])">
       <summary></summary>
