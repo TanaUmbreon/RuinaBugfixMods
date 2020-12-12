@@ -1,0 +1,2369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Assembly-CSharp</name>
+  </assembly>
+  <members>
+    <member name="T:AtkResist">
+      <summary></summary>
+    </member>
+    <member name="F:AtkResist.Endure">
+      <summary></summary>
+    </member>
+    <member name="F:AtkResist.Immune">
+      <summary></summary>
+    </member>
+    <member name="F:AtkResist.None">
+      <summary></summary>
+    </member>
+    <member name="F:AtkResist.Normal">
+      <summary></summary>
+    </member>
+    <member name="F:AtkResist.Resist">
+      <summary></summary>
+    </member>
+    <member name="F:AtkResist.Vulnerable">
+      <summary></summary>
+    </member>
+    <member name="F:AtkResist.Weak">
+      <summary></summary>
+    </member>
+    <member name="T:BattleDiceBehavior">
+      <summary></summary>
+    </member>
+    <member name="F:BattleDiceBehavior._damageReductionByGuard">
+      <summary></summary>
+    </member>
+    <member name="F:BattleDiceBehavior._diceDestroyed">
+      <summary></summary>
+    </member>
+    <member name="F:BattleDiceBehavior._diceResultValue">
+      <summary></summary>
+    </member>
+    <member name="F:BattleDiceBehavior._flags">
+      <summary></summary>
+    </member>
+    <member name="F:BattleDiceBehavior._ignoreKnockback">
+      <summary></summary>
+    </member>
+    <member name="F:BattleDiceBehavior._isParrying">
+      <summary></summary>
+    </member>
+    <member name="F:BattleDiceBehavior._targetDice">
+      <summary></summary>
+    </member>
+    <member name="F:BattleDiceBehavior.abilityList">
+      <summary></summary>
+    </member>
+    <member name="F:BattleDiceBehavior.behaviourInCard">
+      <summary></summary>
+    </member>
+    <member name="F:BattleDiceBehavior.breakState">
+      <summary></summary>
+    </member>
+    <member name="F:BattleDiceBehavior.card">
+      <summary></summary>
+    </member>
+    <member name="F:BattleDiceBehavior.destroyedTiming">
+      <summary></summary>
+    </member>
+    <member name="F:BattleDiceBehavior.forbiddenBonusDice">
+      <summary></summary>
+    </member>
+    <member name="F:BattleDiceBehavior.isBonusAttack">
+      <summary></summary>
+    </member>
+    <member name="F:BattleDiceBehavior.isBonusEvasion">
+      <summary></summary>
+    </member>
+    <member name="F:BattleDiceBehavior.passingEvasion">
+      <summary></summary>
+    </member>
+    <member name="F:BattleDiceBehavior.winAgainstFarAtk">
+      <summary></summary>
+    </member>
+    <member name="M:BattleDiceBehavior.#ctor">
+      <summary></summary>
+    </member>
+    <member name="M:BattleDiceBehavior.AddAbility(DiceCardAbilityBase)">
+      <summary></summary>
+      <param name="ability"></param>
+    </member>
+    <member name="M:BattleDiceBehavior.AddDiceFace(System.Int32)">
+      <summary></summary>
+      <param name="value"></param>
+    </member>
+    <member name="M:BattleDiceBehavior.AddFlag(DiceFlag)">
+      <summary></summary>
+      <param name="flag"></param>
+    </member>
+    <member name="M:BattleDiceBehavior.ApplyDiceStatBonus(DiceStatBonus)">
+      <summary></summary>
+      <param name="bonus"></param>
+    </member>
+    <member name="M:BattleDiceBehavior.BeforeRollDice(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="targetDice"></param>
+    </member>
+    <member name="M:BattleDiceBehavior.CheckUsedBehaviourState">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceBehavior.CopyAbilityAndStat(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+    </member>
+    <member name="M:BattleDiceBehavior.DestroyDice(DiceUITiming)">
+      <summary></summary>
+      <param name="timing"></param>
+    </member>
+    <member name="M:BattleDiceBehavior.GetDiceFace">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceBehavior.GetDiceVanillaFace">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceBehavior.GetScope">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceBehavior.GiveDamage(BattleUnitModel)">
+      <summary></summary>
+      <param name="target"></param>
+    </member>
+    <member name="M:BattleDiceBehavior.HasFlag(DiceFlag)">
+      <summary></summary>
+      <param name="flag"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceBehavior.IsParrying">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleDiceBehavior.OnEventDiceAbility(DiceCardAbilityBase.DiceCardPassiveType,BattleUnitModel)">
+      <summary></summary>
+      <param name="dicePassiveType"></param>
+      <param name="target"></param>
+    </member>
+    <member name="M:BattleDiceBehavior.RollDice">
+      <summary></summary>
+    </member>
+    <member name="M:BattleDiceBehavior.SetDamageRedution(System.Int32)">
+      <summary></summary>
+      <param name="value"></param>
+    </member>
+    <member name="M:BattleDiceBehavior.SetDiceEffect(DiceEffectType)">
+      <summary></summary>
+      <param name="type"></param>
+    </member>
+    <member name="M:BattleDiceBehavior.SetDiceTypeBonus(System.Int32)">
+      <summary></summary>
+      <param name="bonus"></param>
+    </member>
+    <member name="M:BattleDiceBehavior.SetIndex(System.Int32)">
+      <summary></summary>
+      <param name="index"></param>
+    </member>
+    <member name="M:BattleDiceBehavior.UpdateDiceFinalValue">
+      <summary></summary>
+    </member>
+    <member name="P:BattleDiceBehavior.BreakAdder">
+      <summary></summary>
+    </member>
+    <member name="P:BattleDiceBehavior.DamageAdder">
+      <summary></summary>
+    </member>
+    <member name="P:BattleDiceBehavior.Detail">
+      <summary></summary>
+    </member>
+    <member name="P:BattleDiceBehavior.DiceDestroyed">
+      <summary></summary>
+    </member>
+    <member name="P:BattleDiceBehavior.DiceFaceAdder">
+      <summary></summary>
+    </member>
+    <member name="P:BattleDiceBehavior.DiceMin">
+      <summary></summary>
+    </member>
+    <member name="P:BattleDiceBehavior.DiceResultDamage">
+      <summary></summary>
+    </member>
+    <member name="P:BattleDiceBehavior.DiceResultValue">
+      <summary></summary>
+    </member>
+    <member name="P:BattleDiceBehavior.DiceTypeBonus">
+      <summary></summary>
+    </member>
+    <member name="P:BattleDiceBehavior.DiceVanillaValue">
+      <summary></summary>
+    </member>
+    <member name="P:BattleDiceBehavior.EffectType">
+      <summary></summary>
+    </member>
+    <member name="P:BattleDiceBehavior.GuardBreakAdder">
+      <summary></summary>
+    </member>
+    <member name="P:BattleDiceBehavior.GuardBreakMultiplier">
+      <summary></summary>
+    </member>
+    <member name="P:BattleDiceBehavior.Index">
+      <summary></summary>
+    </member>
+    <member name="P:BattleDiceBehavior.owner">
+      <summary></summary>
+    </member>
+    <member name="P:BattleDiceBehavior.PowerAdder">
+      <summary></summary>
+    </member>
+    <member name="P:BattleDiceBehavior.TargetDice">
+      <summary></summary>
+    </member>
+    <member name="P:BattleDiceBehavior.Type">
+      <summary></summary>
+    </member>
+    <member name="T:BattleUnitBuf">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitBuf._owner">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitBuf.hide">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitBuf.stack">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBuf.#ctor">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBuf.AfterDiceAction(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+    </member>
+    <member name="M:BattleUnitBuf.BeforeGiveDamage(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+    </member>
+    <member name="M:BattleUnitBuf.BeforeLoseHPNotDmg(System.Int32)">
+      <summary></summary>
+      <param name="dmg"></param>
+    </member>
+    <member name="M:BattleUnitBuf.BeforeRollDice(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+    </member>
+    <member name="M:BattleUnitBuf.BeforeTakeDamage(BattleUnitModel,System.Int32)">
+      <summary></summary>
+      <param name="attacker"></param>
+      <param name="dmg"></param>
+    </member>
+    <member name="M:BattleUnitBuf.ChangeAttackTarget">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBuf.ChangeTargetSlot(BattleDiceCardModel,BattleUnitModel,System.Int32,System.Int32,System.Boolean)">
+      <summary></summary>
+      <param name="card"></param>
+      <param name="target"></param>
+      <param name="currentSlot"></param>
+      <param name="targetSlot"></param>
+      <param name="teamkill"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBuf.Destroy">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBuf.DirectAttack">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBuf.GetBreakDamageReduction(LOR_DiceSystem.BehaviourDetail)">
+      <summary></summary>
+      <param name="behaviourDetail"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBuf.GetBufIcon">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBuf.GetCardCostAdder(BattleDiceCardModel)">
+      <summary></summary>
+      <param name="card"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBuf.GetDamageReduction(LOR_DiceSystem.BehaviourDetail)">
+      <summary></summary>
+      <param name="behaviourDetail"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBuf.GetDamageReductionAll">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBuf.GetDamageTakenRate">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBuf.GetFixedTarget">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBuf.GetResistBP(AtkResist,LOR_DiceSystem.BehaviourDetail)">
+      <summary></summary>
+      <param name="origin"></param>
+      <param name="detail"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBuf.GetResistHP(AtkResist,LOR_DiceSystem.BehaviourDetail)">
+      <summary></summary>
+      <param name="origin"></param>
+      <param name="detail"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBuf.GetSpeedDiceAdder(System.Int32)">
+      <summary></summary>
+      <param name="speedDiceResult"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBuf.GetStatBonus">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBuf.GetUIData">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBuf.Init(BattleUnitModel)">
+      <summary></summary>
+      <param name="owner"></param>
+    </member>
+    <member name="M:BattleUnitBuf.IsActionable">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBuf.IsAttackDice(LOR_DiceSystem.BehaviourDetail)">
+      <summary></summary>
+      <param name="diceDetail"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBuf.IsDefenseDice(LOR_DiceSystem.BehaviourDetail)">
+      <summary></summary>
+      <param name="diceDetail"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBuf.IsDestroyed">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBuf.IsImmuneDmg">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBuf.IsInvincibleBp(BattleUnitModel)">
+      <summary></summary>
+      <param name="attacker"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBuf.IsInvincibleHp(BattleUnitModel)">
+      <summary></summary>
+      <param name="attacker"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBuf.IsNullifiedPower">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBuf.IsTargetable">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBuf.OnAddBuf">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBuf.OnAfterRollSpeedDice">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBuf.OnBreakState">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBuf.OnDestroyCard(BattlePlayingCardDataInUnitModel)">
+      <summary></summary>
+      <param name="card"></param>
+    </member>
+    <member name="M:BattleUnitBuf.OnDie">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBuf.OnEndBattlePhase">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBuf.OnEndParrying">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBuf.OnFriendTakeDamageByAttack(BattleDiceBehavior,System.Int32)">
+      <summary></summary>
+      <param name="atkDice"></param>
+      <param name="dmg"></param>
+    </member>
+    <member name="M:BattleUnitBuf.OnGiveKeywordBufByCard(BattleUnitBuf,System.Int32,BattleUnitModel)">
+      <summary></summary>
+      <param name="cardBuf"></param>
+      <param name="stack"></param>
+      <param name="target"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBuf.OnHpZero">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBuf.OnKill(BattleUnitModel)">
+      <summary></summary>
+      <param name="target"></param>
+    </member>
+    <member name="M:BattleUnitBuf.OnLayerChanged(System.String)">
+      <summary></summary>
+      <param name="layerName"></param>
+    </member>
+    <member name="M:BattleUnitBuf.OnPrintEffect(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+    </member>
+    <member name="M:BattleUnitBuf.OnRollDice(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+    </member>
+    <member name="M:BattleUnitBuf.OnRollDiceInRecounter">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBuf.OnRollSpeedDice">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBuf.OnRoundEnd">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBuf.OnRoundEndTheLast">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBuf.OnRoundStart">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBuf.OnRoundStartAfter">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBuf.OnStartParrying(BattlePlayingCardDataInUnitModel)">
+      <summary></summary>
+      <param name="card"></param>
+    </member>
+    <member name="M:BattleUnitBuf.OnSuccessAttack(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+    </member>
+    <member name="M:BattleUnitBuf.OnTakeDamageByAttack(BattleDiceBehavior,System.Int32)">
+      <summary></summary>
+      <param name="atkDice"></param>
+      <param name="dmg"></param>
+    </member>
+    <member name="M:BattleUnitBuf.OnUseCard(BattlePlayingCardDataInUnitModel)">
+      <summary></summary>
+      <param name="card"></param>
+    </member>
+    <member name="M:BattleUnitBuf.SpeedDiceBreakedAdder">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBuf.TeamKill">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="P:BattleUnitBuf.bufActivatedName">
+      <summary></summary>
+    </member>
+    <member name="P:BattleUnitBuf.bufActivatedNameWithStack">
+      <summary></summary>
+    </member>
+    <member name="P:BattleUnitBuf.bufActivatedText">
+      <summary></summary>
+    </member>
+    <member name="P:BattleUnitBuf.bufKeywordText">
+      <summary></summary>
+    </member>
+    <member name="P:BattleUnitBuf.bufType">
+      <summary></summary>
+    </member>
+    <member name="P:BattleUnitBuf.Hide">
+      <summary></summary>
+    </member>
+    <member name="P:BattleUnitBuf.IsControlable">
+      <summary></summary>
+    </member>
+    <member name="P:BattleUnitBuf.keywordIconId">
+      <summary></summary>
+    </member>
+    <member name="P:BattleUnitBuf.keywordId">
+      <summary></summary>
+    </member>
+    <member name="P:BattleUnitBuf.paramInBufDesc">
+      <summary></summary>
+    </member>
+    <member name="P:BattleUnitBuf.positiveType">
+      <summary></summary>
+    </member>
+    <member name="T:BattleUnitBufListDetail">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBufListDetail.#ctor(BattleUnitModel)">
+      <summary></summary>
+      <param name="model"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.AddBuf(BattleUnitBuf)">
+      <summary></summary>
+      <param name="buf"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.AddBufWithConnection(BattleUnitBuf,BattleUnitModel)">
+      <summary></summary>
+      <param name="buf"></param>
+      <param name="owner"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.AddBufWithoutDuplication(BattleUnitBuf)">
+      <summary></summary>
+      <param name="buf"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.AddKeywordBufByCard(KeywordBuf,System.Int32,BattleUnitModel)">
+      <summary></summary>
+      <param name="bufType"></param>
+      <param name="stack"></param>
+      <param name="actor"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.AddKeywordBufByEtc(KeywordBuf,System.Int32,BattleUnitModel)">
+      <summary></summary>
+      <param name="bufType"></param>
+      <param name="stack"></param>
+      <param name="actor"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf,System.Int32,BattleUnitModel)">
+      <summary></summary>
+      <param name="bufType"></param>
+      <param name="stack"></param>
+      <param name="actor"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf,System.Int32,BattleUnitModel)">
+      <summary></summary>
+      <param name="bufType"></param>
+      <param name="stack"></param>
+      <param name="actor"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.AddReadyBuf(BattleUnitBuf)">
+      <summary></summary>
+      <param name="buf"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.AfterDiceAction(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.BeforeGiveDamage(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.BeforeLoseHPNotDmg(System.Int32)">
+      <summary></summary>
+      <param name="dmg"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.BeforeRollDice(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.BeforeTakeDamage(BattleUnitModel,System.Int32)">
+      <summary></summary>
+      <param name="attacker"></param>
+      <param name="dmg"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.ChangeAttackTarget">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.ChangeTargetSlot(BattleDiceCardModel,BattleUnitModel,System.Int32,System.Int32,System.Boolean)">
+      <summary></summary>
+      <param name="card"></param>
+      <param name="target"></param>
+      <param name="currentSlot"></param>
+      <param name="targetSlot"></param>
+      <param name="teamkill"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.CheckBufCount">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBufListDetail.CheckDestroyedBuf">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBufListDetail.CheckGift(KeywordBuf,BattleUnitModel)">
+      <summary></summary>
+      <param name="bufType"></param>
+      <param name="actor"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.DirectAttack">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.GetActivatedBuf(KeywordBuf)">
+      <summary></summary>
+      <param name="bufType"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.GetActivatedBufList">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.GetBreakDamageReduction(LOR_DiceSystem.BehaviourDetail)">
+      <summary></summary>
+      <param name="behaviourDetail"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.GetBufUIDataList">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.GetCardCostAdder(BattleDiceCardModel)">
+      <summary></summary>
+      <param name="card"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.GetDamageReduction(LOR_DiceSystem.BehaviourDetail)">
+      <summary></summary>
+      <param name="behaviourDetail"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.GetDamageReductionAll">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.GetDamageTakenRate">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.GetFixedTargets">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.GetKewordBufAllStack(KeywordBuf)">
+      <summary></summary>
+      <param name="keyword"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.GetKewordBufStack(KeywordBuf)">
+      <summary></summary>
+      <param name="keyword"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.GetReadyBufList">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.GetResistBP(AtkResist,LOR_DiceSystem.BehaviourDetail)">
+      <summary></summary>
+      <param name="origin"></param>
+      <param name="detail"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.GetResistHP(AtkResist,LOR_DiceSystem.BehaviourDetail)">
+      <summary></summary>
+      <param name="origin"></param>
+      <param name="detail"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.GetSpeedDiceAdder(System.Int32)">
+      <summary></summary>
+      <param name="speedDiceResult"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.GetStatBonus">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.HasStun">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.IsActionable">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.IsControlable">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.IsImmuneDmg">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.IsInvincibleBp(BattleUnitModel)">
+      <summary></summary>
+      <param name="attacker"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.IsInvincibleHp(BattleUnitModel)">
+      <summary></summary>
+      <param name="attacker"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.IsNullifyPower">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.IsTargetable">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.OnAfterRollSpeedDice">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBufListDetail.OnBreakState">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBufListDetail.OnDestroyCard(BattlePlayingCardDataInUnitModel)">
+      <summary></summary>
+      <param name="card"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.OnDie">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBufListDetail.OnEndParrying">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBufListDetail.OnFriendTakeDamageByAttack(BattleDiceBehavior,System.Int32)">
+      <summary></summary>
+      <param name="atkDice"></param>
+      <param name="dmg"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.OnGiveKeywordBufByCard(BattleUnitBuf,System.Int32,BattleUnitModel)">
+      <summary></summary>
+      <param name="targetBuf"></param>
+      <param name="stack"></param>
+      <param name="target"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.OnHpZero">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBufListDetail.OnKill(BattleUnitModel)">
+      <summary></summary>
+      <param name="target"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.OnLayerChanged(System.String)">
+      <summary></summary>
+      <param name="layerName"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.OnRollDice(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.OnRollDiceInReencounter">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBufListDetail.OnRollSpeedDice">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBufListDetail.OnRoundEnd">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBufListDetail.OnRoundEndTheLast">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBufListDetail.OnRoundStart">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBufListDetail.OnRoundStartAfter">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBufListDetail.OnStartParrying(BattlePlayingCardDataInUnitModel)">
+      <summary></summary>
+      <param name="card"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.OnSuccessAttack(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.OnTakeDamageByAttack(BattleDiceBehavior,System.Int32)">
+      <summary></summary>
+      <param name="atkDice"></param>
+      <param name="dmg"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.OnUseCard(BattlePlayingCardDataInUnitModel)">
+      <summary></summary>
+      <param name="card"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.RemoveBuf(BattleUnitBuf)">
+      <summary></summary>
+      <param name="buf"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.RemoveBufAll(System.Type)">
+      <summary></summary>
+      <param name="buf"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.RemoveBufAll(KeywordBuf)">
+      <summary></summary>
+      <param name="bufType"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.RemoveBufAll(BufPositiveType)">
+      <summary></summary>
+      <param name="bufPositiveType"></param>
+    </member>
+    <member name="M:BattleUnitBufListDetail.RemoveBufAll">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitBufListDetail.SpeedDiceBreakAdder">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitBufListDetail.TeamKill">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="T:BattleUnitModel">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.aggroDetail">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.allyCardDetail">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.battleCardResultLog">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.breakDetail">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.bufListDetail">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.cardHistory">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.cardOrder">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.cardSlotDetail">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.currentDiceAction">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.currentSpeedDiceIdx">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.direction">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.disposed">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.equipment">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.faction">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.forceRetreat">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.formation">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.history">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.hp">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.ignoreBloodyEffect">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.index">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.isRegister">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.isTauntable">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.lastAttacker">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.moveDetail">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.passiveDetail">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.personalEgoDetail">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.speedDiceResult">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.stopped">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.targetSetter">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.turnState">
+      <summary></summary>
+    </member>
+    <member name="F:BattleUnitModel.view">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.#ctor(System.Int32)">
+      <summary></summary>
+      <param name="id"></param>
+    </member>
+    <member name="M:BattleUnitModel.AfterDiceAction(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+    </member>
+    <member name="M:BattleUnitModel.AfterRollSpeedDice">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.BeforeGiveDamage(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+    </member>
+    <member name="M:BattleUnitModel.BeforeLoseHPNotDmg(System.Int32)">
+      <summary></summary>
+      <param name="dmg"></param>
+    </member>
+    <member name="M:BattleUnitModel.BeforeRollDice(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+    </member>
+    <member name="M:BattleUnitModel.BeforeTakeDamage(BattleUnitModel,System.Int32)">
+      <summary></summary>
+      <param name="attacker"></param>
+      <param name="dmg"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.CanChangeAttackTarget(BattleUnitModel,System.Int32,System.Int32)">
+      <summary></summary>
+      <param name="target"></param>
+      <param name="myIndex"></param>
+      <param name="targetIndex"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.ChangeAttackTarget(BattleDiceCardModel,System.Int32)">
+      <summary></summary>
+      <param name="card"></param>
+      <param name="idx"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.ChangeDamage(BattleUnitModel,System.Double)">
+      <summary></summary>
+      <param name="attacker"></param>
+      <param name="dmg"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.ChangeTargetSlot(BattleDiceCardModel,BattleUnitModel,System.Int32,System.Int32,System.Boolean)">
+      <summary></summary>
+      <param name="card"></param>
+      <param name="target"></param>
+      <param name="currentSlot"></param>
+      <param name="targetSlot"></param>
+      <param name="teamkill"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.CheckCardAvailable(BattleDiceCardModel)">
+      <summary></summary>
+      <param name="card"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.CheckCardAvailableForPlayer(BattleDiceCardModel)">
+      <summary></summary>
+      <param name="card"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.ConnectBuf(BattleUnitBuf)">
+      <summary></summary>
+      <param name="buf"></param>
+    </member>
+    <member name="M:BattleUnitModel.Die(BattleUnitModel)">
+      <summary></summary>
+      <param name="attacker"></param>
+    </member>
+    <member name="M:BattleUnitModel.DieFake">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.DirectAttack">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.Extinct(System.Boolean)">
+      <summary></summary>
+      <param name="b"></param>
+    </member>
+    <member name="M:BattleUnitModel.GetBreakDamageReduction(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.GetBreakDamageReductionAll">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.GetCurrentSpeed">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.GetDamageReduction(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.GetDamageReductionAll">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.GetDamageTakenRate">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.GetFixedTargets">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.GetResistBP(LOR_DiceSystem.BehaviourDetail)">
+      <summary></summary>
+      <param name="detail"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.GetResistBP_Text(LOR_DiceSystem.BehaviourDetail)">
+      <summary></summary>
+      <param name="detail"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.GetResistHP(LOR_DiceSystem.BehaviourDetail)">
+      <summary></summary>
+      <param name="detail"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.GetResistHP_Text(LOR_DiceSystem.BehaviourDetail)">
+      <summary></summary>
+      <param name="detail"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.GetSpeed(System.Int32)">
+      <summary></summary>
+      <param name="idx"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.GetSpeedDiceResult(System.Int32)">
+      <summary></summary>
+      <param name="index"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.GetTakenGuardBreakDamageAdder(System.Int32)">
+      <summary></summary>
+      <param name="dmg"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.IsActionable">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.IsAttackable(BattleUnitModel)">
+      <summary></summary>
+      <param name="target"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.IsBreakLifeZero">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.IsControlable">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.IsImmune(KeywordBuf)">
+      <summary></summary>
+      <param name="buf"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.IsImmuneDmg">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.IsInvincibleBp(BattleUnitModel)">
+      <summary></summary>
+      <param name="attacker"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.IsInvincibleHp(BattleUnitModel)">
+      <summary></summary>
+      <param name="attacker"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.IsNullifyPower">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.IsTargetable">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.LoseHp(System.Int32)">
+      <summary></summary>
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.MaxPlayPointAdder">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.OnAddKeywordBufByCard(BattleUnitBuf,System.Int32)">
+      <summary></summary>
+      <param name="buf"></param>
+      <param name="stack"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.OnApplyCard(BattleDiceCardModel)">
+      <summary></summary>
+      <param name="card"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.OnBattleEnd">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.OnBattleEnd_alive">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.OnBreakGageZero">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.OnBreakState">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.OnCapturedAsTarget(BattleUnitModel)">
+      <summary></summary>
+      <param name="attacker"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnDestroyCard(BattlePlayingCardDataInUnitModel)">
+      <summary></summary>
+      <param name="card"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnDie">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.OnDieOtherUnit(BattleUnitModel)">
+      <summary></summary>
+      <param name="unit"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnDiscardByAbility(System.Collections.Generic.List{BattleDiceCardModel})">
+      <summary></summary>
+      <param name="cards"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnDispose">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.OnDrawCard">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.OnDrawParrying(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnEndFarAreaPlay">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.OnEndOneSideAction(System.Boolean)">
+      <summary></summary>
+      <param name="wasAttacker"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnEndOneSideAction_Before(BattlePlayingCardDataInUnitModel)">
+      <summary></summary>
+      <param name="curCard"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnEndOnSideActionVictim_Before(BattlePlayingCardDataInUnitModel)">
+      <summary></summary>
+      <param name="attackerCard"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnEndParrying">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.OnEndParrying_Before(BattlePlayingCardDataInUnitModel)">
+      <summary></summary>
+      <param name="curCard"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnEnemyRollDice(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnFixedUpdate(System.Single)">
+      <summary></summary>
+      <param name="deltaTime"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnFixedUpdateInWaitPhase(System.Single)">
+      <summary></summary>
+      <param name="delta"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnGainChargeStack">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.OnGiveKeywordBufByCard(BattleUnitBuf,System.Int32,BattleUnitModel)">
+      <summary></summary>
+      <param name="buf"></param>
+      <param name="stack"></param>
+      <param name="target"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.OnHpZero">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.OnKill(BattleUnitModel)">
+      <summary></summary>
+      <param name="target"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnLayerChanged(System.String)">
+      <summary></summary>
+      <param name="layerName"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnLoseParrying(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnMakeBreakState(BattleUnitModel)">
+      <summary></summary>
+      <param name="target"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnOtherUnitReservedCostChanged(BattleUnitModel,System.Int32)">
+      <summary></summary>
+      <param name="unit"></param>
+      <param name="cur"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnParryingStart(BattlePlayingCardDataInUnitModel)">
+      <summary></summary>
+      <param name="card"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnRecoverHp(System.Int32)">
+      <summary></summary>
+      <param name="recoverAmount"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnReleaseBreak">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.OnRollDice(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnRollDiceInRecounter">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.OnRoundEnd">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.OnRoundEnd_after">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.OnRoundEndTheLast">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.OnRoundEndTheLast_ignoreDead">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.OnRoundStart">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.OnRoundStart_before">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.OnRoundStartOnlyUI">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.OnSelectCardAuto(BattleDiceCardModel,System.Int32)">
+      <summary></summary>
+      <param name="origin"></param>
+      <param name="currentDiceSlotIdx"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.OnStartBattle">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.OnStartCardAction(BattlePlayingCardDataInUnitModel)">
+      <summary></summary>
+      <param name="curCard"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnStartOneSideAction(BattlePlayingCardDataInUnitModel)">
+      <summary></summary>
+      <param name="curCard"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnStartTargetedByAreaAtk(BattlePlayingCardDataInUnitModel)">
+      <summary></summary>
+      <param name="attackerCard"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnStartTargetedOneSide(BattlePlayingCardDataInUnitModel)">
+      <summary></summary>
+      <param name="attackerCard"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnSucceedAttack(BattleDiceBehavior,BattleUnitModel)">
+      <summary></summary>
+      <param name="behavior"></param>
+      <param name="target"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnTakeDamageByAttack(BattleDiceBehavior,System.Int32)">
+      <summary></summary>
+      <param name="atkDice"></param>
+      <param name="dmg"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnUseCard(BattlePlayingCardDataInUnitModel)">
+      <summary></summary>
+      <param name="card"></param>
+    </member>
+    <member name="M:BattleUnitModel.OnUseChargeStack">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.OnWaveStart">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.OnWinParrying(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+    </member>
+    <member name="M:BattleUnitModel.RecoverBreakLife(System.Int32)">
+      <summary></summary>
+      <param name="v"></param>
+    </member>
+    <member name="M:BattleUnitModel.RecoverHP(System.Int32)">
+      <summary></summary>
+      <param name="v"></param>
+    </member>
+    <member name="M:BattleUnitModel.ResetBreakGauge">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.ResetTurn">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.Revive(System.Int32)">
+      <summary></summary>
+      <param name="recoverHp"></param>
+    </member>
+    <member name="M:BattleUnitModel.RollSpeedDice">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.SetCurrentOrder(System.Int32)">
+      <summary></summary>
+      <param name="idx"></param>
+    </member>
+    <member name="M:BattleUnitModel.SetDeadSceneBlock(System.Boolean)">
+      <summary></summary>
+      <param name="b"></param>
+    </member>
+    <member name="M:BattleUnitModel.SetRole">
+      <summary></summary>
+    </member>
+    <member name="M:BattleUnitModel.SetTimeScale(System.Single)">
+      <summary></summary>
+      <param name="timeScale"></param>
+    </member>
+    <member name="M:BattleUnitModel.SetUnitData(UnitBattleDataModel)">
+      <summary></summary>
+      <param name="unitBattleData"></param>
+    </member>
+    <member name="M:BattleUnitModel.ShowPassiveTypo(PassiveAbilityBase)">
+      <summary></summary>
+      <param name="passive"></param>
+    </member>
+    <member name="M:BattleUnitModel.ShowTypoTemporary(BattleEmotionCardModel,System.Int32,ResultOption,System.Int32[])">
+      <summary></summary>
+      <param name="emotionPassive"></param>
+      <param name="index"></param>
+      <param name="option"></param>
+      <param name="param"></param>
+    </member>
+    <member name="M:BattleUnitModel.SpendCardAndCost(BattleDiceCardModel)">
+      <summary></summary>
+      <param name="card"></param>
+    </member>
+    <member name="M:BattleUnitModel.TakeBreakDamage(System.Int32,BattleUnitModel,AtkResist)">
+      <summary></summary>
+      <param name="damage"></param>
+      <param name="attacker"></param>
+      <param name="atkResist"></param>
+    </member>
+    <member name="M:BattleUnitModel.TakeDamage(System.Int32,BattleUnitModel,System.Boolean)">
+      <summary></summary>
+      <param name="v"></param>
+      <param name="attacker"></param>
+      <param name="isAdditionalDmg"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.TeamKill">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleUnitModel.UpdateDirection(UnityEngine.Vector3)">
+      <summary></summary>
+      <param name="targetPos"></param>
+    </member>
+    <member name="M:BattleUnitModel.UpdateUnitData">
+      <summary></summary>
+    </member>
+    <member name="P:BattleUnitModel.Book">
+      <summary></summary>
+    </member>
+    <member name="P:BattleUnitModel.customBook">
+      <summary></summary>
+    </member>
+    <member name="P:BattleUnitModel.emotionDetail">
+      <summary></summary>
+    </member>
+    <member name="P:BattleUnitModel.formationCellPos">
+      <summary></summary>
+    </member>
+    <member name="P:BattleUnitModel.id">
+      <summary></summary>
+    </member>
+    <member name="P:BattleUnitModel.IsDeadSceneBlock">
+      <summary></summary>
+    </member>
+    <member name="P:BattleUnitModel.MaxBreakLife">
+      <summary></summary>
+    </member>
+    <member name="P:BattleUnitModel.MaxHp">
+      <summary></summary>
+    </member>
+    <member name="P:BattleUnitModel.MaxPlayPoint">
+      <summary></summary>
+    </member>
+    <member name="P:BattleUnitModel.PlayPoint">
+      <summary></summary>
+    </member>
+    <member name="P:BattleUnitModel.Team">
+      <summary></summary>
+    </member>
+    <member name="P:BattleUnitModel.UnitData">
+      <summary></summary>
+    </member>
+    <member name="T:BehaviourActionBase">
+      <summary></summary>
+    </member>
+    <member name="F:BehaviourActionBase._self">
+      <summary></summary>
+    </member>
+    <member name="F:BehaviourActionBase.opponentAction">
+      <summary></summary>
+    </member>
+    <member name="F:BehaviourActionBase.selfAction">
+      <summary></summary>
+    </member>
+    <member name="M:BehaviourActionBase.#ctor">
+      <summary></summary>
+    </member>
+    <member name="M:BehaviourActionBase.GetMovingAction(RencounterManager.ActionAfterBehaviour@,RencounterManager.ActionAfterBehaviour@)">
+      <summary></summary>
+      <param name="self"></param>
+      <param name="opponent"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BehaviourActionBase.IsMovable">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BehaviourActionBase.IsOpponentMovable">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BehaviourActionBase.SetFarAreaAtkEffect(BattleUnitModel)">
+      <summary></summary>
+      <param name="self"></param>
+      <returns></returns>
+    </member>
+    <member name="T:DiceCardAbilityBase">
+      <summary></summary>
+    </member>
+    <member name="F:DiceCardAbilityBase.behavior">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardAbilityBase.#ctor">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardAbilityBase.ActivateBonusAttackDice">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardAbilityBase.AfterAction">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardAbilityBase.BeforeGiveDamage">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardAbilityBase.BeforeGiveDamage(BattleUnitModel)">
+      <summary></summary>
+      <param name="target"></param>
+    </member>
+    <member name="M:DiceCardAbilityBase.BeforeRollDice_Target(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="targetDice"></param>
+    </member>
+    <member name="M:DiceCardAbilityBase.BeforRollDice">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardAbilityBase.GetKeywords">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:DiceCardAbilityBase.GetMaximumPercentDmg">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:DiceCardAbilityBase.IsAttackDice(LOR_DiceSystem.BehaviourDetail)">
+      <summary></summary>
+      <param name="diceDetail"></param>
+      <returns></returns>
+    </member>
+    <member name="M:DiceCardAbilityBase.IsDefenseDice(LOR_DiceSystem.BehaviourDetail)">
+      <summary></summary>
+      <param name="diceDetail"></param>
+      <returns></returns>
+    </member>
+    <member name="M:DiceCardAbilityBase.OnDrawParrying">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardAbilityBase.OnLoseParrying">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardAbilityBase.OnRollDice">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardAbilityBase.OnSucceedAreaAttack(BattleUnitModel)">
+      <summary></summary>
+      <param name="target"></param>
+    </member>
+    <member name="M:DiceCardAbilityBase.OnSucceedAttack">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardAbilityBase.OnSucceedAttack(BattleUnitModel)">
+      <summary></summary>
+      <param name="target"></param>
+    </member>
+    <member name="M:DiceCardAbilityBase.OnWinParrying">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardAbilityBase.OnWinParryingDefense">
+      <summary></summary>
+    </member>
+    <member name="P:DiceCardAbilityBase.card">
+      <summary></summary>
+    </member>
+    <member name="P:DiceCardAbilityBase.Invalidity">
+      <summary></summary>
+    </member>
+    <member name="P:DiceCardAbilityBase.IsPercentDmg">
+      <summary></summary>
+    </member>
+    <member name="P:DiceCardAbilityBase.Keywords">
+      <summary></summary>
+    </member>
+    <member name="P:DiceCardAbilityBase.owner">
+      <summary></summary>
+    </member>
+    <member name="T:DiceCardSelfAbilityBase">
+      <summary></summary>
+    </member>
+    <member name="F:DiceCardSelfAbilityBase.card">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardSelfAbilityBase.#ctor">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardSelfAbilityBase.AfterAction">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardSelfAbilityBase.AfterGiveDamage(System.Int32)">
+      <summary></summary>
+      <param name="damage"></param>
+    </member>
+    <member name="M:DiceCardSelfAbilityBase.BeforeAddToHand(BattleUnitModel,BattleDiceCardModel)">
+      <summary></summary>
+      <param name="unit"></param>
+      <param name="self"></param>
+      <returns></returns>
+    </member>
+    <member name="M:DiceCardSelfAbilityBase.BeforeRollDice(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+    </member>
+    <member name="M:DiceCardSelfAbilityBase.GetCostAdder(BattleUnitModel,BattleDiceCardModel)">
+      <summary></summary>
+      <param name="unit"></param>
+      <param name="self"></param>
+      <returns></returns>
+    </member>
+    <member name="M:DiceCardSelfAbilityBase.OnApplyCard">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardSelfAbilityBase.OnChooseCard(BattleUnitModel)">
+      <summary></summary>
+      <param name="owner"></param>
+      <returns></returns>
+    </member>
+    <member name="M:DiceCardSelfAbilityBase.OnDiscard(BattleUnitModel,BattleDiceCardModel)">
+      <summary></summary>
+      <param name="unit"></param>
+      <param name="self"></param>
+    </member>
+    <member name="M:DiceCardSelfAbilityBase.OnEndAreaAttack">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardSelfAbilityBase.OnEndBattle">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardSelfAbilityBase.OnReleaseCard">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardSelfAbilityBase.OnRollAreaAttack">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardSelfAbilityBase.OnStartBattle">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardSelfAbilityBase.OnStartOneSideAction">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardSelfAbilityBase.OnStartParrying">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardSelfAbilityBase.OnSucceedAreaAttack(BattleUnitModel)">
+      <summary></summary>
+      <param name="target"></param>
+    </member>
+    <member name="M:DiceCardSelfAbilityBase.OnSucceedAtkEvent">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardSelfAbilityBase.OnSucceedAttack">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardSelfAbilityBase.OnSucceedDefense">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardSelfAbilityBase.OnSucceedDefEvent">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardSelfAbilityBase.OnUseCard">
+      <summary></summary>
+    </member>
+    <member name="M:DiceCardSelfAbilityBase.OnUseCardEvent">
+      <summary></summary>
+    </member>
+    <member name="P:DiceCardSelfAbilityBase.Keywords">
+      <summary></summary>
+    </member>
+    <member name="P:DiceCardSelfAbilityBase.owner">
+      <summary></summary>
+    </member>
+    <member name="T:GiftInventory">
+      <summary>戦闘表象のインベントリです。このオブジェクトは保存可能です。</summary>
+    </member>
+    <member name="F:GiftInventory.save_equipList">
+      <summary></summary>
+    </member>
+    <member name="F:GiftInventory.save_offList">
+      <summary></summary>
+    </member>
+    <member name="F:GiftInventory.save_unequipList">
+      <summary></summary>
+    </member>
+    <member name="M:GiftInventory.#ctor(UnitDataModel)">
+      <summary></summary>
+      <param name="owner"></param>
+    </member>
+    <member name="M:GiftInventory.AddGift(System.Int32)">
+      <summary>指定した ID の戦闘表象をインベントリに追加します。</summary>
+      <param name="id">追加する戦闘表象の ID。</param>
+      <returns>追加に成功した場合はその戦闘表象オブジェクト、既に追加済みまたは追加できなかった場合は null を返します。</returns>
+    </member>
+    <member name="M:GiftInventory.AddGift(GiftModel)">
+      <summary>指定した戦闘表象をインベントリに追加します。</summary>
+      <param name="gift">追加する戦闘表象。</param>
+      <returns>追加に成功した場合はその戦闘表象オブジェクト、既に追加済みまたは追加できなかった場合は null を返します。</returns>
+    </member>
+    <member name="M:GiftInventory.AlreadyGained(GiftModel)">
+      <summary>指定した戦闘表象が既に入手済みである事を示す値を返します。</summary>
+      <param name="gift">戦闘表象。</param>
+      <returns>入手済みの場合は true、未入手の場合は false を返します。</returns>
+    </member>
+    <member name="M:GiftInventory.AlreadyGained(System.Int32)">
+      <summary>指定した ID の戦闘表象が既に入手済みである事を示す値を返します。</summary>
+      <param name="id">戦闘表象の ID。</param>
+      <returns>入手済みの場合は true、未入手の場合は false を返します。</returns>
+    </member>
+    <member name="M:GiftInventory.AlreadyGained(GiftXmlInfo)">
+      <summary></summary>
+      <param name="gift"></param>
+      <returns></returns>
+    </member>
+    <member name="M:GiftInventory.Equip(GiftModel)">
+      <summary>指定した戦闘表象を装備します。</summary>
+      <param name="gift">装備する戦闘表象。</param>
+      <returns>装備した場合は true、既に装備済みまたは装備できなかった場合は false を返します。</returns>
+    </member>
+    <member name="M:GiftInventory.GetAllGiftsListForTitle">
+      <summary>所持している全ての戦闘表象のリストを取得します。このメソッドにより取得したリストでは戦闘表象インベントリを変更できません。</summary>
+      <returns>所持している全ての戦闘表象のリスト。</returns>
+    </member>
+    <member name="M:GiftInventory.GetEquippedList">
+      <summary>装備中の戦闘表象のリストを取得します。このメソッドにより取得したリストでは戦闘表象インベントリを変更できます。</summary>
+      <returns>装備中の戦闘表象のリスト。</returns>
+    </member>
+    <member name="M:GiftInventory.GetSaveData">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:GiftInventory.GetStatBonus_Amp">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:GiftInventory.GetStatBonus_Break">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:GiftInventory.GetStatBonus_BreakRecover">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:GiftInventory.GetStatBonus_Dmg(LOR_DiceSystem.BehaviourDetail)">
+      <summary></summary>
+      <param name="type"></param>
+      <returns></returns>
+    </member>
+    <member name="M:GiftInventory.GetStatBonus_Hp">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:GiftInventory.GetStatBonus_Tune">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:GiftInventory.GetUnequippedList">
+      <summary>装備から外している戦闘表象のリストを取得します。このメソッドにより取得したリストでは戦闘表象インベントリを変更できます。</summary>
+      <returns>装備から外している戦闘表象のリスト。</returns>
+    </member>
+    <member name="M:GiftInventory.LoadFromSaveData(GameSave.SaveData)">
+      <summary></summary>
+      <param name="data"></param>
+    </member>
+    <member name="M:GiftInventory.UnEquip(GiftModel)">
+      <summary>指定した戦闘表象を装備から外します。</summary>
+      <param name="gift">装備から外す戦闘表象。</param>
+      <returns>装備から外した場合は true、既に外していたまたは外せなかった場合は false を返します。</returns>
+    </member>
+    <member name="T:KeywordBuf">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.AllPowerUp">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.Binding">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.Bleeding">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.BloodStackBlock">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.Blurry">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.Burn">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.BurnBreak">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.BurnSpread">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.CB_BigBadWolf_Stealth">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.CB_BlackSwanDeadBro">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.CB_CopiousBleeding">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.CB_UniverseDecreaseMaxBp">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.CurrentCandy">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.Decay">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.DecreaseSpeedTo1">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.Disarm">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.DmgUp">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.Endurance">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.Fairy">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.FairyCare">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.HitPowerUp">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.IndexRelease">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.KnightOfDespairBlessing">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.None">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.NullifyPower">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.OldLady">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.Paralysis">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.PenetratePowerUp">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.Protection">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.QueenOfHatredHatred">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.QueenOfHatredSign">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.Quickness">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.RedMist">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.RedMistEgo">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.RedShoes">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.Regeneration">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.Seal">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.Shock">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.SingingMachine">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.SingingMachineRecital">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.SlashPowerUp">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.Smoke">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.SnowQueenPower">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.SpiderBudCocoon">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.Strength">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.Stun">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.SweeperDup">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.SweeperRevival">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.TakeBpDmg">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.TeddyLove">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.UniverseCardBuf">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.UniverseEnlightenment">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.Vibrate">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.Vulnerable">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.Vulnerable_break">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.WarpCharge">
+      <summary></summary>
+    </member>
+    <member name="F:KeywordBuf.Weak">
+      <summary></summary>
+    </member>
+    <member name="T:PassiveAbilityBase">
+      <summary>パッシブの基底クラスです。全てのパッシブはこのクラスを派生して実装されます。</summary>
+    </member>
+    <member name="F:PassiveAbilityBase.desc">
+      <summary></summary>
+    </member>
+    <member name="F:PassiveAbilityBase.destroyed">
+      <summary></summary>
+    </member>
+    <member name="F:PassiveAbilityBase.isHide">
+      <summary></summary>
+    </member>
+    <member name="F:PassiveAbilityBase.isNegative">
+      <summary></summary>
+    </member>
+    <member name="F:PassiveAbilityBase.level">
+      <summary></summary>
+    </member>
+    <member name="F:PassiveAbilityBase.name">
+      <summary></summary>
+    </member>
+    <member name="F:PassiveAbilityBase.owner">
+      <summary>パッシブ所有者</summary>
+    </member>
+    <member name="F:PassiveAbilityBase.rare">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveAbilityBase.#ctor">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveAbilityBase.AfterGiveDamage(System.Int32)">
+      <summary></summary>
+      <param name="damage"></param>
+    </member>
+    <member name="M:PassiveAbilityBase.BeforeGiveDamage(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+    </member>
+    <member name="M:PassiveAbilityBase.BeforeRollDice(BattleDiceBehavior)">
+      <summary>ダイス ロールの直前に呼び出されます。</summary>
+      <param name="behavior">ロールに使用されているバトル ダイスに対するビヘイビア (振る舞いを操作するオブジェクト)。</param>
+    </member>
+    <member name="M:PassiveAbilityBase.BeforeTakeDamage(BattleUnitModel,System.Int32)">
+      <summary></summary>
+      <param name="attacker"></param>
+      <param name="dmg"></param>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.CanAddBuf(BattleUnitBuf)">
+      <summary></summary>
+      <param name="buf"></param>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.CanTakeTargeting">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.ChangeAttackTarget(BattleDiceCardModel,System.Int32)">
+      <summary></summary>
+      <param name="card"></param>
+      <param name="idx"></param>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.ChangeDiceResult(BattleDiceBehavior,System.Int32@)">
+      <summary></summary>
+      <param name="behavior"></param>
+      <param name="diceResult"></param>
+    </member>
+    <member name="M:PassiveAbilityBase.ChangeSubTargets(BattleDiceCardModel,BattleUnitModel)">
+      <summary></summary>
+      <param name="card"></param>
+      <param name="mainTarget"></param>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.ChangeTargetSlot(BattleDiceCardModel,BattleUnitModel,System.Int32,System.Int32,System.Boolean)">
+      <summary></summary>
+      <param name="card"></param>
+      <param name="target"></param>
+      <param name="currentSlot"></param>
+      <param name="targetSlot"></param>
+      <param name="teamkill"></param>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.DontChangeResistByBreak">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.GetBreakDamageReduction(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.GetBreakDamageReductionAll">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.GetDamageReduction(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.GetDamageReductionAll">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.GetMaxBpBonus">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.GetMaxHpBonus">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.GetResistBP(AtkResist,LOR_DiceSystem.BehaviourDetail)">
+      <summary></summary>
+      <param name="origin"></param>
+      <param name="detail"></param>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.GetResistHP(AtkResist,LOR_DiceSystem.BehaviourDetail)">
+      <summary></summary>
+      <param name="origin"></param>
+      <param name="detail"></param>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.GetSpeedDiceAdder(System.Int32)">
+      <summary></summary>
+      <param name="speedDiceResult"></param>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.GetStartHp(System.Single)">
+      <summary></summary>
+      <param name="hp"></param>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.GetTakenGuardBreakDamageAdder(System.Int32)">
+      <summary></summary>
+      <param name="dmg"></param>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.Init(BattleUnitModel)">
+      <summary></summary>
+      <param name="self"></param>
+    </member>
+    <member name="M:PassiveAbilityBase.IsAttackDice(LOR_DiceSystem.BehaviourDetail)">
+      <summary></summary>
+      <param name="diceDetail"></param>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.IsDefenseDice(LOR_DiceSystem.BehaviourDetail)">
+      <summary></summary>
+      <param name="diceDetail"></param>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.IsImmune(KeywordBuf)">
+      <summary></summary>
+      <param name="buf"></param>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.IsNearOrFar(BattleDiceCardModel)">
+      <summary></summary>
+      <param name="card"></param>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.MaxPlayPointAdder">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.OnAddKeywordBufByCard(BattleUnitBuf,System.Int32)">
+      <summary></summary>
+      <param name="buf"></param>
+      <param name="stack"></param>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.OnAfterRollSpeedDice">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveAbilityBase.OnBattleEnd">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveAbilityBase.OnBattleEnd_alive">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveAbilityBase.OnBreakGageZero">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.OnBreakState">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveAbilityBase.OnCreated">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveAbilityBase.OnDestroyCard(BattlePlayingCardDataInUnitModel)">
+      <summary></summary>
+      <param name="card"></param>
+    </member>
+    <member name="M:PassiveAbilityBase.OnDestroyed">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveAbilityBase.OnDie">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveAbilityBase.OnDieOtherUnit(BattleUnitModel)">
+      <summary>このパッシブ所有者以外のユニット (敵味方を問わず) が死亡した場合に呼び出されます。</summary>
+      <param name="unit">死亡したユニット。</param>
+    </member>
+    <member name="M:PassiveAbilityBase.OnDiscardByAbility(System.Collections.Generic.List{BattleDiceCardModel})">
+      <summary></summary>
+      <param name="cards"></param>
+    </member>
+    <member name="M:PassiveAbilityBase.OnDrawParrying(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+    </member>
+    <member name="M:PassiveAbilityBase.OnEndBattlePhase">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveAbilityBase.OnEndOneSide">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveAbilityBase.OnEndOneSideVictim(BattlePlayingCardDataInUnitModel)">
+      <summary></summary>
+      <param name="attackerCard"></param>
+    </member>
+    <member name="M:PassiveAbilityBase.OnEndParrying">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveAbilityBase.OnEndParrying(BattlePlayingCardDataInUnitModel)">
+      <summary></summary>
+      <param name="curCard"></param>
+    </member>
+    <member name="M:PassiveAbilityBase.OnExhaustBullet">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveAbilityBase.OnFixedUpdateInWaitPhase(System.Single)">
+      <summary></summary>
+      <param name="delta"></param>
+    </member>
+    <member name="M:PassiveAbilityBase.OnGainChargeStack">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveAbilityBase.OnGiveKeywordBufByCard(BattleUnitBuf,System.Int32,BattleUnitModel)">
+      <summary></summary>
+      <param name="buf"></param>
+      <param name="stack"></param>
+      <param name="target"></param>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.OnKill(BattleUnitModel)">
+      <summary></summary>
+      <param name="target"></param>
+    </member>
+    <member name="M:PassiveAbilityBase.OnLevelUpEmotion">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveAbilityBase.OnLoseParrying(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+    </member>
+    <member name="M:PassiveAbilityBase.OnMakeBreakState(BattleUnitModel)">
+      <summary></summary>
+      <param name="target"></param>
+    </member>
+    <member name="M:PassiveAbilityBase.OnOtherUnitReservedCostChanged(BattleUnitModel,System.Int32)">
+      <summary></summary>
+      <param name="unit"></param>
+      <param name="cur"></param>
+    </member>
+    <member name="M:PassiveAbilityBase.OnRecoverHp(System.Int32)">
+      <summary></summary>
+      <param name="amount"></param>
+    </member>
+    <member name="M:PassiveAbilityBase.OnReleaseBreak">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveAbilityBase.OnRollDiceInRencounter">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveAbilityBase.OnRollSpeedDice">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveAbilityBase.OnRoundEnd">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveAbilityBase.OnRoundEndTheLast">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveAbilityBase.OnRoundEndTheLast_ignoreDead">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveAbilityBase.OnRoundStart">
+      <summary>幕の開始時に呼び出されます。</summary>
+    </member>
+    <member name="M:PassiveAbilityBase.OnRoundStartAfter">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveAbilityBase.OnSelectCardAuto(BattleDiceCardModel,System.Int32)">
+      <summary></summary>
+      <param name="origin"></param>
+      <param name="currentDiceSlotIdx"></param>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveAbilityBase.OnStartBattle">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveAbilityBase.OnStartOneSidePlay(BattlePlayingCardDataInUnitModel)">
+      <summary></summary>
+      <param name="card"></param>
+    </member>
+    <member name="M:PassiveAbilityBase.OnStartParrying(BattlePlayingCardDataInUnitModel)">
+      <summary></summary>
+      <param name="card"></param>
+    </member>
+    <member name="M:PassiveAbilityBase.OnStartTargetedByAreaAtk(BattlePlayingCardDataInUnitModel)">
+      <summary></summary>
+      <param name="attackerCard"></param>
+    </member>
+    <member name="M:PassiveAbilityBase.OnStartTargetedOneSide(BattlePlayingCardDataInUnitModel)">
+      <summary></summary>
+      <param name="attackerCard"></param>
+    </member>
+    <member name="M:PassiveAbilityBase.OnSucceedAttack(BattleDiceBehavior)">
+      <summary>攻撃の命中時に呼び出されます。</summary>
+      <param name="behavior">攻撃に使用されているバトル ダイスに対するビヘイビア (振る舞いを操作するオブジェクト)。</param>
+    </member>
+    <member name="M:PassiveAbilityBase.OnSucceedAttackEvent(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+    </member>
+    <member name="M:PassiveAbilityBase.OnTakeDamageByAttack(BattleDiceBehavior,System.Int32)">
+      <summary></summary>
+      <param name="atkDice"></param>
+      <param name="dmg"></param>
+    </member>
+    <member name="M:PassiveAbilityBase.OnUseCard(BattlePlayingCardDataInUnitModel)">
+      <summary></summary>
+      <param name="curCard"></param>
+    </member>
+    <member name="M:PassiveAbilityBase.OnUseChargeStack">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveAbilityBase.OnWaveStart">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveAbilityBase.OnWinParrying(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behavior"></param>
+    </member>
+    <member name="M:PassiveAbilityBase.SpeedDiceBreakedAdder">
+      <summary>使用不可にする速度ダイスの加算数を返します。</summary>
+      <returns>使用不可にする速度ダイスの加算数。</returns>
+    </member>
+    <member name="M:PassiveAbilityBase.SpeedDiceNumAdder">
+      <summary>速度ダイスの加算数を返します。</summary>
+      <returns>速度ダイスの加算数。</returns>
+    </member>
+    <member name="P:PassiveAbilityBase.debugDesc">
+      <summary></summary>
+    </member>
+    <member name="P:PassiveAbilityBase.isActionable">
+      <summary></summary>
+    </member>
+    <member name="P:PassiveAbilityBase.isImmortal">
+      <summary></summary>
+    </member>
+    <member name="P:PassiveAbilityBase.isImmuneByFarAtk">
+      <summary></summary>
+    </member>
+    <member name="P:PassiveAbilityBase.isInvincible">
+      <summary></summary>
+    </member>
+    <member name="P:PassiveAbilityBase.isInvincibleBp">
+      <summary></summary>
+    </member>
+    <member name="P:PassiveAbilityBase.isInvincibleHp">
+      <summary></summary>
+    </member>
+    <member name="P:PassiveAbilityBase.isStraighten">
+      <summary></summary>
+    </member>
+    <member name="P:PassiveAbilityBase.isTargetable">
+      <summary>このパッシブ所有者にターゲット可能である事を示す値を取得します。</summary>
+    </member>
+    <member name="T:RandomUtil">
+      <summary></summary>
+    </member>
+    <member name="F:RandomUtil.randomValue">
+      <summary></summary>
+    </member>
+    <member name="M:RandomUtil.#ctor">
+      <summary></summary>
+    </member>
+    <member name="M:RandomUtil.Range(System.Int32,System.Int32)">
+      <summary></summary>
+      <param name="min"></param>
+      <param name="max"></param>
+      <returns></returns>
+    </member>
+    <member name="M:RandomUtil.RangeFloat(System.Single,System.Single)">
+      <summary></summary>
+      <param name="min"></param>
+      <param name="max"></param>
+      <returns></returns>
+    </member>
+    <member name="M:RandomUtil.SelectOne``1()">
+      <summary></summary>
+      <typeparam name="T"></typeparam>
+      <param name="list"></param>
+      <returns></returns>
+    </member>
+    <member name="M:RandomUtil.SelectOne``1(System.Collections.Generic.List{``0})">
+      <summary></summary>
+      <typeparam name="T"></typeparam>
+      <param name="list"></param>
+      <returns></returns>
+    </member>
+    <member name="M:RandomUtil.SelectOne``1(,System.Single[])">
+      <summary></summary>
+      <typeparam name="T"></typeparam>
+      <param name="list"></param>
+      <param name="probs"></param>
+      <returns></returns>
+    </member>
+    <member name="M:RandomUtil.SystemRange(System.Int32)">
+      <summary></summary>
+      <param name="max"></param>
+      <returns></returns>
+    </member>
+    <member name="P:RandomUtil.valueForProb">
+      <summary></summary>
+    </member>
+    <member name="P:RandomUtil.valueForRange">
+      <summary></summary>
+    </member>
+  </members>
+</doc>
