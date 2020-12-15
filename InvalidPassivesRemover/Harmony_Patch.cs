@@ -5,10 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
-using GameSave;
 using HarmonyLib;
-using UI;
 
 namespace InvalidPassivesRemover
 {
@@ -21,29 +18,9 @@ namespace InvalidPassivesRemover
         {
             try
             {
-                new Harmony("InvalidPassivesRemover").Patch(
-                    GetMethod<BookModel>("LoadFromSaveData"), null,
-                    new HarmonyMethod(GetMethod<Harmony_Patch>("InvalidPassivesRemover_LoadFromSaveData")), null, null);
-
-                new Harmony("InvalidPassivesRemover").Patch(
-                    GetMethod<UIPassiveSuccessionPopup>("OnClickReleaseAllEquipedBookButton"), null,
-                    new HarmonyMethod(GetMethod<Harmony_Patch>(nameof(UIPassiveSuccessionPopup_OnClickReleaseAllEquipedBookButton))), null, null);
-
-                new Harmony("InvalidPassivesRemover").Patch(
-                    GetMethod<UILibrarianInfoPanel>("OnClickReleaseBookButton"), null,
-                    new HarmonyMethod(GetMethod<Harmony_Patch>(nameof(UILibrarianInfoPanel_OnClickReleaseBookButton))), null, null);
-
-                new Harmony("InvalidPassivesRemover").Patch(
-                    GetMethod<UIPassiveSuccessionCenterEquipBookSlot>("OnClickReleaseButton"), null,
-                    new HarmonyMethod(GetMethod<Harmony_Patch>(nameof(UIPassiveSuccessionCenterEquipBookSlot_OnClickReleaseButton))), null, null);
-
-                new Harmony("InvalidPassivesRemover").Patch(
-                    GetMethod<UILibrarianInfoInCardPhase>("OnClickReleaseToggle"), null,
-                    new HarmonyMethod(GetMethod<Harmony_Patch>(nameof(UILibrarianInfoInCardPhase_OnClickReleaseToggle))), null, null);
-
-                new Harmony("InvalidPassivesRemover").Patch(
-                    GetMethod<UIBattleSettingLibrarianInfoPanel>("OnClickReleaseToggle"), null,
-                    new HarmonyMethod(GetMethod<Harmony_Patch>(nameof(UIBattleSettingLibrarianInfoPanel_OnClickReleaseToggle))), null, null);
+                PatchPostfixHarmonyMethod<BookModel>(
+                    originalMethodName: "LoadFromSaveData",
+                    harmonyMethodName: nameof(InvalidPassivesRemover_LoadFromSaveData));
             }
             catch (Exception ex)
             {
@@ -51,109 +28,117 @@ namespace InvalidPassivesRemover
             }
         }
 
-        public static void UIPassiveSuccessionPopup_OnClickReleaseAllEquipedBookButton(UIPassiveSuccessionPopup __instance) =>
-            Log.Instance.AppendLine($"Called {nameof(UIPassiveSuccessionPopup_OnClickReleaseAllEquipedBookButton)}");
-        public static void UILibrarianInfoPanel_OnClickReleaseBookButton(UILibrarianInfoPanel __instance) =>
-            Log.Instance.AppendLine($"Called {nameof(UILibrarianInfoPanel_OnClickReleaseBookButton)}");
-        public static void UIPassiveSuccessionCenterEquipBookSlot_OnClickReleaseButton(UIPassiveSuccessionCenterEquipBookSlot __instance) =>
-            Log.Instance.AppendLine($"Called {nameof(UIPassiveSuccessionCenterEquipBookSlot_OnClickReleaseButton)}");
-        public static void UILibrarianInfoInCardPhase_OnClickReleaseToggle(UILibrarianInfoInCardPhase __instance) =>
-            Log.Instance.AppendLine($"Called {nameof(UILibrarianInfoInCardPhase_OnClickReleaseToggle)}");
-        public static void UIBattleSettingLibrarianInfoPanel_OnClickReleaseToggle(UIBattleSettingLibrarianInfoPanel __instance) =>
-            Log.Instance.AppendLine($"Called {nameof(UIBattleSettingLibrarianInfoPanel_OnClickReleaseToggle)}");
-
-
         /// <summary>
-        /// 指定した型に所属する指定した名前のメソッド情報を取得します。
+        /// 型パラメータに指定した型に所属する指定した名前のメソッド (オリジナル メソッド) が呼び出された後、
+        /// 指定した名前のメソッドを呼び出す HarmonyPatch を適用します。
         /// </summary>
-        /// <typeparam name="T">メソッド情報を取得する型。</typeparam>
+        /// <typeparam name="T">オリジナル メソッドが所属する型。</typeparam>
         /// <param name="name"><typeparamref name="T"/> に所属するメソッドの名前。</param>
-        /// <returns></returns>
-        private MethodInfo GetMethod<T>(string name) => typeof(T).GetMethod(name, AccessTools.all);
+        /// <param name="harmonyMethodName">オリジナルのメソッドが呼び出された後に呼び出されるメソッドの名前。</param>
+        private void PatchPostfixHarmonyMethod<T>(string originalMethodName, string harmonyMethodName)
+        {
+            new Harmony("InvalidPassivesRemover").Patch(
+                typeof(T).GetMethod(originalMethodName, AccessTools.all), 
+                null,
+                new HarmonyMethod(typeof(Harmony_Patch).GetMethod(harmonyMethodName, AccessTools.all)), 
+                null, 
+                null);
+        }
+
 
         /// <summary>
         /// <see cref="BookModel.LoadFromSaveData"/> メソッドが呼び出された後に時に実行する
         /// <see cref="HarmonyMethod"/> です。
         /// </summary>
-        /// <param name="__instance">コア ページのインスタンス。</param>
+        /// <param name="__instance">ページのインスタンス。</param>
         public static void InvalidPassivesRemover_LoadFromSaveData(BookModel __instance)
         {
             var log = new StringBuilder();
             try
             {
                 log.AppendLine($"[{nameof(InvalidPassivesRemover_LoadFromSaveData)}] が呼び出されました。");
-                log.AppendLine($"コアページID: {__instance.instanceId} ({__instance.Name})");
+                log.AppendLine($"ページID: {__instance.instanceId} ({__instance.Name})");
 
-                log.AppendLine("<<SaveData>>");
-                SaveData data = __instance.GetSaveData();
-                SaveData data4 = data.GetData("allpassiveList");
-                if (data4 != null)
-                {
-                    foreach (SaveData data5 in data4)
+                var invalidPassives = new List<PassiveModel>();
+
+                log.AppendLine("<<無効なパッシブの検知 (装備中のパッシブ)>>");
+                int slotIndex = 0;
+                foreach (PassiveModel passive in __instance.GetPassiveModelList())
+                { 
+                    // いずれかのPassiveXmlInfoが定義されていないものを無効なパッシブと判断する
+                    if (passive.originpassive == null || passive.originData.currentpassive == null)
                     {
-                        PassiveModel passiveModel = new PassiveModel(__instance.instanceId);
-                        passiveModel.LoadFromSaveData(data5);
-                        log.AppendLine($"- Id: {passiveModel?.originData?.currentpassive?.id.ToString() ?? "null (passiveModel.originData.currentpassive <PassiveXmlInfo> が null)"}");
+                        invalidPassives.Add(passive);
+                        log.AppendLine($"- スロット {slotIndex}: null (無効なパッシブ)");
                     }
+                    else
+                    {
+                        log.AppendLine($"- スロット {slotIndex}: {passive.originData.currentpassive.id}");
+                    }
+
+                    slotIndex++;
+                }
+
+                if (invalidPassives.Any())
+                {
+                    log.AppendLine("無効なパッシブを検出しました。装備中のパッシブを初期化します。");
+                    InitializeInvalidPassives(__instance, invalidPassives, log);
+                    log.AppendLine("装備中のパッシブを初期化しました。");
+                }
+                else
+                {
+                    log.AppendLine("無効なパッシブはありません。");
                 }
 
                 log.AppendLine("<<装備中のパッシブ>>");
                 __instance.GetPassiveInfoList().ForEach(p => log.AppendLine($"- ID: {p.passive.id} ({p.name})"));
-
-                log.AppendLine("<<帰属中のコアページ>>");
-                __instance.GetEquipedBookList().ForEach(b => log.AppendLine($"- ID: {b.instanceId} ({b.Name})"));
             }
             catch (Exception ex)
             {
                 log.AppendLine("データを取得できませんでした。");
                 log.AppendLine(ex.Message);
+                log.AppendLine(ex.GetType().FullName);
                 log.AppendLine(ex.StackTrace);
-
-                try
-                {
-                    ReleaseAllEquipedBooks(__instance);
-                    log.AppendLine("ReleaseAllEquipedBooksを呼び出しました。");
-
-                    log.AppendLine("<<装備中のパッシブ>>");
-                    __instance.GetPassiveInfoList().ForEach(p => log.AppendLine($"- ID: {p.passive.id} ({p.name})"));
-                }
-                catch (Exception)
-                {
-                    log.AppendLine("データを取得できませんでした。");
-                    log.AppendLine(ex.Message);
-                    log.AppendLine(ex.StackTrace);
-                }
             }
             finally
             {
-                //Log.Instance.AppendLine(log.ToString());
+                Log.Instance.AppendLine(log.ToString());
             }
         }
 
         /// <summary>
-        /// 指定したコア ページの帰属を初期化します。
+        /// 指定したページから指定した無効なパッシブを初期化します。
         /// </summary>
-        private static void ReleaseAllEquipedBooks(BookModel book)
+        /// <param name="book"></param>
+        /// <param name="invalidPassives"></param>
+        /// <param name="log"></param>
+        private static void InitializeInvalidPassives(BookModel book, IEnumerable<PassiveModel> invalidPassives, StringBuilder log)
         {
-            // UI.UIInvenLeftEquipPageSlot.OnClickRelaseButton() メソッドと同等の内容
-
-            if (book.CanEquipBookByGivePassive())
+            Type type = book.GetType();
+            FieldInfo field = type.GetField("_activatedAllPassives", BindingFlags.NonPublic | BindingFlags.Instance);
+            if (!(field.GetValue(book) is List<PassiveModel> activatedAllPassives))
             {
-                book.ReleaseAllEquipedPassiveBooks(true);
-                return;
+                throw new ArgumentNullException("BookModel._activatedAllPassives が取得できません。");
             }
 
-            BookModel bookByInstanceIdInAllBookEquiped =
-                Singleton<BookInventoryModel>.Instance.GetBookByInstanceIdInAllBookEquiped(
-                    book.originData.equipedPassiveBookInstanceId, book.instanceId, true);
+            //// デバッグ用途出力
+            //log.AppendLine("activatedAllPassives の値");
+            //foreach (string value in activatedAllPassives.EnumerateItemFieldValue())
+            //{
+            //    log.AppendLine(value);
+            //}
 
-            if (bookByInstanceIdInAllBookEquiped == null)
+            // 無効なパッシブは空のスロットに置き換える
+            foreach (PassiveModel passive in invalidPassives)
             {
-                Log.Instance.AppendLine($"ID: {book.originData.equipedPassiveBookInstanceId} の本が存在しません。");
-                return;
+                int index = activatedAllPassives.IndexOf(passive);
+                if (index < 0) { continue; }
+
+                activatedAllPassives[index] = new PassiveModel(0, book.instanceId, 1);
+                log.AppendLine($"スロット {index} のパッシブを初期化しました。");
             }
 
-            bookByInstanceIdInAllBookEquiped.UnEquipGivePassiveBook(book, true);
+            book.TryGainUniquePassive();
         }
     }
 }
