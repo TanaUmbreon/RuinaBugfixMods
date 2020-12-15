@@ -1673,6 +1673,580 @@
       <param name="self"></param>
       <returns></returns>
     </member>
+    <member name="T:BookModel">
+      <summary>キャラクターが装着するページを表します。</summary>
+    </member>
+    <member name="F:BookModel._exp">
+      <summary></summary>
+    </member>
+    <member name="F:BookModel._level">
+      <summary></summary>
+    </member>
+    <member name="F:BookModel.basicBookOwner">
+      <summary></summary>
+    </member>
+    <member name="F:BookModel.hBpResist">
+      <summary></summary>
+    </member>
+    <member name="F:BookModel.hHpResist">
+      <summary></summary>
+    </member>
+    <member name="F:BookModel.instanceId">
+      <summary>ページ ID</summary>
+    </member>
+    <member name="F:BookModel.originData">
+      <summary></summary>
+    </member>
+    <member name="F:BookModel.owner">
+      <summary></summary>
+    </member>
+    <member name="F:BookModel.pBpResist">
+      <summary></summary>
+    </member>
+    <member name="F:BookModel.pHpResist">
+      <summary></summary>
+    </member>
+    <member name="F:BookModel.reservedData">
+      <summary></summary>
+    </member>
+    <member name="F:BookModel.save_bookmark">
+      <summary></summary>
+    </member>
+    <member name="F:BookModel.save_deck">
+      <summary></summary>
+    </member>
+    <member name="F:BookModel.save_equipedbookList">
+      <summary></summary>
+    </member>
+    <member name="F:BookModel.save_equipedpassivebookInstanceId">
+      <summary></summary>
+    </member>
+    <member name="F:BookModel.save_exp">
+      <summary></summary>
+    </member>
+    <member name="F:BookModel.save_id">
+      <summary></summary>
+    </member>
+    <member name="F:BookModel.save_instanceId">
+      <summary></summary>
+    </member>
+    <member name="F:BookModel.save_invenlock">
+      <summary></summary>
+    </member>
+    <member name="F:BookModel.save_level">
+      <summary></summary>
+    </member>
+    <member name="F:BookModel.save_passiveList">
+      <summary></summary>
+    </member>
+    <member name="F:BookModel.save_ver2level">
+      <summary></summary>
+    </member>
+    <member name="F:BookModel.sBpResist">
+      <summary></summary>
+    </member>
+    <member name="F:BookModel.sHpResist">
+      <summary></summary>
+    </member>
+    <member name="M:BookModel.#ctor">
+      <summary></summary>
+    </member>
+    <member name="M:BookModel.#ctor(BookXmlInfo)">
+      <summary></summary>
+      <param name="classInfo"></param>
+    </member>
+    <member name="M:BookModel.AddCardFromInventory(System.Int32)">
+      <summary></summary>
+      <param name="cardId"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.ApplyPassiveSuccession">
+      <summary></summary>
+    </member>
+    <member name="M:BookModel.CanEquipBookByGivePassive">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.CanSuccessionPassive(PassiveModel,GivePassiveState@)">
+      <summary></summary>
+      <param name="targetpassive"></param>
+      <param name="haspassiveState"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.CanSuccessionPassiveByCost(PassiveModel,PassiveModel,System.Boolean)">
+      <summary></summary>
+      <param name="prevpassive"></param>
+      <param name="nextpassive"></param>
+      <param name="origin"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.CanToGivePassiveBook(System.Boolean)">
+      <summary></summary>
+      <param name="origin"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.ChangePassive(PassiveModel,PassiveModel)">
+      <summary></summary>
+      <param name="currentBookPassive"></param>
+      <param name="changeBookPassive"></param>
+    </member>
+    <member name="M:BookModel.CheckCustomCoreBook">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.CheckExistPassiveBook">
+      <summary></summary>
+    </member>
+    <member name="M:BookModel.CheckOverPassiveCost(System.Boolean)">
+      <summary></summary>
+      <param name="origin"></param>
+    </member>
+    <member name="M:BookModel.ContainsCategory(BookCategory)">
+      <summary></summary>
+      <param name="category"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.CopyDeck">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.CreateBookForWorkshop">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.CreateDeckByDeckInfo(System.Boolean)">
+      <summary></summary>
+      <param name="isInventoryDeck"></param>
+    </member>
+    <member name="M:BookModel.CreatePassiveList">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.CreateSoulCard(System.Int32)">
+      <summary></summary>
+      <param name="emotionLevel"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.EmptyDeckToInventory">
+      <summary></summary>
+    </member>
+    <member name="M:BookModel.EquipGivePassiveBook(BookModel)">
+      <summary></summary>
+      <param name="book"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.FeedBook(BookModel)">
+      <summary></summary>
+      <param name="book"></param>
+    </member>
+    <member name="M:BookModel.FillDeckFromInventory(System.Int32)">
+      <summary></summary>
+      <param name="deckid"></param>
+    </member>
+    <member name="M:BookModel.GainExp(System.Int32)">
+      <summary></summary>
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetBookCategories">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetBookClassInfoId">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetBookMarkState">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetCanHasPassiveNum">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetCardCount(System.Int32)">
+      <summary></summary>
+      <param name="cardId"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetCharacterName">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetCurrentPassiveCost(System.Boolean)">
+      <summary></summary>
+      <param name="origin"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetDeckAll">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetDeckAll_nocopy">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetDeckCardModelAll">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetDeckSize">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetEquipedBookList(System.Boolean)">
+      <summary></summary>
+      <param name="origin"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetFeedExp">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetGiveBookModel">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetLimit">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetLockInventoryState">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetMaxExp">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetMaxExp(System.Int32)">
+      <summary></summary>
+      <param name="level"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetMaxLevel">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetMaxPassiveCost">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetMaxPlayPoint">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetName">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetOnlyCards">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetOriginalCharcterName">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetPassiveBookState">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetPassiveInfoList(System.Boolean)">
+      <summary>装備中のパッシブ情報のリストを取得します。</summary>
+      <param name="onlyActivated">(未使用パラメータ)</param>
+      <returns>パッシブ情報のリスト。</returns>
+    </member>
+    <member name="M:BookModel.GetPassiveModelList">
+      <summary>装備中のパッシブ モデル (ローカライズに影響しないパッシブ情報をモデル化したオブジェクト) のリストを取得します。</summary>
+      <returns>装備中のパッシブ モデルのリスト。</returns>
+    </member>
+    <member name="M:BookModel.GetPossibleRemainCost(PassiveModel,System.Boolean)">
+      <summary></summary>
+      <param name="ownequipedPassive"></param>
+      <param name="origin"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetRarity">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetRarityText">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetResistBP(LOR_DiceSystem.BehaviourDetail)">
+      <summary></summary>
+      <param name="detail"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetResistBP_Text(LOR_DiceSystem.BehaviourDetail)">
+      <summary></summary>
+      <param name="detail"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetResistBP_Text(LOR_DiceSystem.BehaviourDetail,AtkResist)">
+      <summary></summary>
+      <param name="detail"></param>
+      <param name="atkResist"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetResistHP(LOR_DiceSystem.BehaviourDetail)">
+      <summary></summary>
+      <param name="detail"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetResistHP_Text(LOR_DiceSystem.BehaviourDetail)">
+      <summary></summary>
+      <param name="detail"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetResistHP_Text(LOR_DiceSystem.BehaviourDetail,AtkResist)">
+      <summary></summary>
+      <param name="detail"></param>
+      <param name="atkResist"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetResistRate(AtkResist)">
+      <summary></summary>
+      <param name="atkResist"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetSaveData">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetSoulCards">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetSpeedDiceRule(BattleUnitModel)">
+      <summary></summary>
+      <param name="unit"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetSpeedDiceText">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetStartDraw">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetStartPlayPoint">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetSuccessionPassivesByBook(BookModel,System.Boolean)">
+      <summary></summary>
+      <param name="book"></param>
+      <param name="origin"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.GetThumbPath">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.InitReservedDataForPassiveSuccession">
+      <summary></summary>
+    </member>
+    <member name="M:BookModel.IsBasicBook">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.IsDeckLocked">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.IsEquipedPassiveBook">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.isExistGivePassive">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.IsFixedDeck">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.IsMaxCost">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.IsNotFullEquipPassiveBook">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.LoadFromSaveData(GameSave.SaveData)">
+      <summary>指定したページのセーブ データを読み込みます。</summary>
+      <param name="data">ページの情報が格納されたセーブ データ。</param>
+    </member>
+    <member name="M:BookModel.LoadFromSaveDataExceptId(GameSave.SaveData)">
+      <summary></summary>
+      <param name="data"></param>
+    </member>
+    <member name="M:BookModel.MoveCardToInventory(System.Int32)">
+      <summary></summary>
+      <param name="cardId"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.ReleaseAllEquipedPassiveBooks(System.Boolean)">
+      <summary></summary>
+      <param name="origin"></param>
+    </member>
+    <member name="M:BookModel.ReleasePassive(PassiveModel,System.Boolean)">
+      <summary></summary>
+      <param name="passive"></param>
+      <param name="origin"></param>
+    </member>
+    <member name="M:BookModel.ResisterBookMark(System.Boolean)">
+      <summary></summary>
+      <param name="on"></param>
+    </member>
+    <member name="M:BookModel.SetBasicBookOwner(UnitDataModel)">
+      <summary></summary>
+      <param name="owner"></param>
+    </member>
+    <member name="M:BookModel.SetBp(System.Int32)">
+      <summary></summary>
+      <param name="maxBp"></param>
+    </member>
+    <member name="M:BookModel.SetCharacterName(System.String)">
+      <summary></summary>
+      <param name="s"></param>
+    </member>
+    <member name="M:BookModel.SetHp(System.Int32)">
+      <summary></summary>
+      <param name="maxHp"></param>
+    </member>
+    <member name="M:BookModel.SetLevel(System.Int32)">
+      <summary></summary>
+      <param name="targetLevel"></param>
+    </member>
+    <member name="M:BookModel.SetLockInventory(System.Boolean)">
+      <summary></summary>
+      <param name="on"></param>
+    </member>
+    <member name="M:BookModel.SetMaxPlayPoint(System.Int32)">
+      <summary></summary>
+      <param name="maxPoint"></param>
+    </member>
+    <member name="M:BookModel.SetOriginalCharacterName">
+      <summary></summary>
+    </member>
+    <member name="M:BookModel.SetOriginalPlayPoint">
+      <summary></summary>
+    </member>
+    <member name="M:BookModel.SetOriginalResists">
+      <summary></summary>
+    </member>
+    <member name="M:BookModel.SetOriginalSpeed">
+      <summary></summary>
+    </member>
+    <member name="M:BookModel.SetOriginalStat">
+      <summary></summary>
+    </member>
+    <member name="M:BookModel.SetOwner(UnitDataModel)">
+      <summary></summary>
+      <param name="newOwner"></param>
+    </member>
+    <member name="M:BookModel.SetResistBP(LOR_DiceSystem.BehaviourDetail,AtkResist)">
+      <summary></summary>
+      <param name="detail"></param>
+      <param name="resist"></param>
+    </member>
+    <member name="M:BookModel.SetResistHP(LOR_DiceSystem.BehaviourDetail,AtkResist)">
+      <summary></summary>
+      <param name="detail"></param>
+      <param name="resist"></param>
+    </member>
+    <member name="M:BookModel.SetSpeedDiceMax(System.Int32)">
+      <summary></summary>
+      <param name="maxValue"></param>
+    </member>
+    <member name="M:BookModel.SetSpeedDiceMin(System.Int32)">
+      <summary></summary>
+      <param name="minValue"></param>
+    </member>
+    <member name="M:BookModel.SetStartPlayPoint(System.Int32)">
+      <summary></summary>
+      <param name="playPoint"></param>
+    </member>
+    <member name="M:BookModel.SortPassive(System.Collections.Generic.List{PassiveModel})">
+      <summary></summary>
+      <param name="passivelist"></param>
+    </member>
+    <member name="M:BookModel.Test2">
+      <summary></summary>
+    </member>
+    <member name="M:BookModel.TryGainPassive">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.TryGainUniquePassive">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BookModel.UnEquipGivePassiveBook(BookModel,System.Boolean)">
+      <summary></summary>
+      <param name="unequipbook"></param>
+      <param name="origin"></param>
+    </member>
+    <member name="P:BookModel.AddedStartDraw">
+      <summary></summary>
+    </member>
+    <member name="P:BookModel.bookIcon">
+      <summary></summary>
+    </member>
+    <member name="P:BookModel.bookIconGlow">
+      <summary></summary>
+    </member>
+    <member name="P:BookModel.Break">
+      <summary></summary>
+    </member>
+    <member name="P:BookModel.ClassInfo">
+      <summary>StaticInfo (EquipPage.txt) に定義されたページ情報を取得します。</summary>
+    </member>
+    <member name="P:BookModel.DeadLine">
+      <summary></summary>
+    </member>
+    <member name="P:BookModel.EmotionLevel">
+      <summary></summary>
+    </member>
+    <member name="P:BookModel.equipeffect">
+      <summary></summary>
+    </member>
+    <member name="P:BookModel.Exp">
+      <summary></summary>
+    </member>
+    <member name="P:BookModel.HP">
+      <summary></summary>
+    </member>
+    <member name="P:BookModel.HpReduction">
+      <summary></summary>
+    </member>
+    <member name="P:BookModel.IsEmptyDeck">
+      <summary></summary>
+    </member>
+    <member name="P:BookModel.IsRandomFace">
+      <summary></summary>
+    </member>
+    <member name="P:BookModel.Level">
+      <summary></summary>
+    </member>
+    <member name="P:BookModel.Name">
+      <summary>ページ名を取得します。</summary>
+    </member>
+    <member name="P:BookModel.Rarity">
+      <summary></summary>
+    </member>
+    <member name="P:BookModel.SpeedMax">
+      <summary></summary>
+    </member>
+    <member name="P:BookModel.SpeedMin">
+      <summary></summary>
+    </member>
     <member name="T:DiceCardAbilityBase">
       <summary>バトル ページのバトル ダイスに付与された効果を表す基底クラスです。全てのバトル ダイス効果はこのクラスを派生して実装されます。</summary>
       <summary></summary>
@@ -2570,6 +3144,113 @@
     </member>
     <member name="P:PassiveAbilityBase.isTargetable">
       <summary>このパッシブの所有キャラクターにターゲット可能である事を示す値を取得します。</summary>
+    </member>
+    <member name="T:PassiveModel">
+      <summary>パッシブを表します。</summary>
+    </member>
+    <member name="F:PassiveModel.isAddedPassive">
+      <summary></summary>
+    </member>
+    <member name="F:PassiveModel.originData">
+      <summary>セーブ データとして保存されていたオリジナル データ</summary>
+    </member>
+    <member name="F:PassiveModel.originpassive">
+      <summary>StaticInfo (PassiveList.txt) に定義された、変更が加えられていないオリジナルのパッシブ情報</summary>
+      <summary></summary>
+    </member>
+    <member name="F:PassiveModel.reservedData">
+      <summary></summary>
+    </member>
+    <member name="F:PassiveModel.save_bookxmlid">
+      <summary></summary>
+    </member>
+    <member name="F:PassiveModel.save_currentpassiveid">
+      <summary></summary>
+    </member>
+    <member name="F:PassiveModel.save_givebookInstanceId">
+      <summary></summary>
+    </member>
+    <member name="F:PassiveModel.save_isAddedPassiveId">
+      <summary></summary>
+    </member>
+    <member name="F:PassiveModel.save_originpassiveidid">
+      <summary></summary>
+    </member>
+    <member name="F:PassiveModel.save_receivebookInstanceId">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveModel.#ctor">
+      <summary><see cref="PassiveModel"/> の新しいインスタンスを生成します。</summary>
+    </member>
+    <member name="M:PassiveModel.#ctor(System.Int32,System.Int32,System.Int32)">
+      <summary><see cref="PassiveModel"/> の新しいインスタンスを生成します。</summary>
+      <param name="id">パッシブ ID。</param>
+      <param name="bookinstanceid">このパッシブを保有するページ ID。</param>
+      <param name="isaddedpassive">0 の場合は有効なパッシブ、0 以外の場合は空きスロットとして追加されたダミー パッシブ (ID が 9999999 のパッシブ) として認識させます。</param>
+    </member>
+    <member name="M:PassiveModel.#ctor(System.Int32)">
+      <summary><see cref="PassiveModel"/> の新しいインスタンスを生成します。</summary>
+      <param name="bookinstanceid">このパッシブを保有するページ ID。</param>
+    </member>
+    <member name="M:PassiveModel.ApplyReserved">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveModel.DeepCopy(PassiveXmlInfo)">
+      <summary></summary>
+      <param name="passive"></param>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveModel.GetReleaseLevel">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveModel.GetSaveData">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveModel.InitReservedData">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveModel.IsChangedReserved">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveModel.IsGiveFromPassiveModel(PassiveModel)">
+      <summary></summary>
+      <param name="targetpassive"></param>
+      <returns></returns>
+    </member>
+    <member name="M:PassiveModel.LoadFromSaveData(GameSave.SaveData)">
+      <summary></summary>
+      <param name="data"></param>
+    </member>
+    <member name="M:PassiveModel.ReleaseSuccesionGivePassive(System.Boolean)">
+      <summary></summary>
+      <param name="origin"></param>
+    </member>
+    <member name="M:PassiveModel.ReleaseSuccesionReceivePassive(System.Boolean)">
+      <summary></summary>
+      <param name="origin"></param>
+    </member>
+    <member name="M:PassiveModel.ResetReservedPassive">
+      <summary></summary>
+    </member>
+    <member name="M:PassiveModel.SetGiveBookId(System.Int32)">
+      <summary></summary>
+      <param name="instanceid"></param>
+    </member>
+    <member name="M:PassiveModel.SuccessionPassiveForReserved(PassiveModel)">
+      <summary></summary>
+      <param name="passivemodel"></param>
+    </member>
+    <member name="P:PassiveModel.BookInstanceId">
+      <summary>このパッシブを保有するページ ID を取得します。</summary>
+    </member>
+    <member name="P:PassiveModel.CanToGivePassive">
+      <summary></summary>
+    </member>
+    <member name="P:PassiveModel.IsReceivedSuccessionPassive">
+      <summary>継承されたパッシブであることを示す値を取得します。</summary>
     </member>
     <member name="T:RandomUtil">
       <summary>乱数操作を行うユーティリティ クラスです。</summary>
