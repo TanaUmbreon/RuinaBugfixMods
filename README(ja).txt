@@ -32,6 +32,8 @@ Library of Ruinaのセーブデータは以下の場所に保存されていま�
 このREADMEファイルと同じフォルダに置かれているフォルダをBaseMods直下に配置することで動作します。
 
 [RuinaBugfixMods-bin-x.x.x]
+├ [Z_InvalidPassivesRemover] ←このフォルダをBaseMods直下に配置する
+│  └[InvalidPassivesRemover.dll]
 ├ [Z_ModAddedGiftsRemover] ←このフォルダをBaseMods直下に配置する
 │  └[ModAddedGiftsRemover.dll]
 └ [README(ja).txt] ←今開いているファイル
@@ -68,3 +70,19 @@ MODが読み込まれる順番は、BaseMods直下の各MODフォルダを昇順
 
 このMODが実行されるとログファイル"ModAddedGiftsRemoverLog.txt"がBaseMods直下に作成されます。
 どの戦闘表象が削除されたか確認することができます。
+
+
+<<Z_InvalidPassivesRemover (InvalidPassivesRemover.dll)>>
+
+セーブデータのロード時に、ページに装備されている無効なパッシブを初期化します。
+カスタムパッシブ (カスタムページ) が追加される他のMODを使用→削除したことにより、
+コアページ編集ができなくなった場合にのみ使用してください。
+
+ゲーム起動後は「続きから」を選択してセーブデータを読み込んでください。
+その後、コアページ編集の画面が表示されるようになり、問題が解消されていることを確認してください。
+確認が完了後は、ゲーム終了時に自動セーブが行われる操作(司書のデッキやパッシブ、戦闘表象の装備を変更する等)を必ず行ってください。
+これを行わない場合は、この修正MODがセーブデータに反映されず、ゲーム起動前の状態に戻ってしまいます。
+
+このMODが実行されるとログファイル"InvalidPassivesRemoverLog.txt"がBaseMods直下に作成されます。
+どのページのパッシブに異常があり初期化されたかを確認することができます。
+
