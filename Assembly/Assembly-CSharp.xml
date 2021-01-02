@@ -1057,7 +1057,7 @@
       <summary></summary>
     </member>
     <member name="F:BattleUnitModel.faction">
-      <summary></summary>
+      <summary>敵または味方の派閥。</summary>
     </member>
     <member name="F:BattleUnitModel.forceRetreat">
       <summary></summary>
@@ -2472,6 +2472,15 @@
     <member name="M:DiceStatBonus.Copy">
       <summary>このインスタンスのディープ コピーを作成して返します。</summary>
       <returns></returns>
+    </member>
+    <member name="T:Faction">
+      <summary>敵または味方の派閥を表します。</summary>
+    </member>
+    <member name="F:Faction.Enemy">
+      <summary>敵</summary>
+    </member>
+    <member name="F:Faction.Player">
+      <summary>味方</summary>
     </member>
     <member name="T:GiftInventory">
       <summary>戦闘表象のインベントリです。このオブジェクトは保存可能です。</summary>
