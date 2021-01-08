@@ -359,10 +359,10 @@
       <returns></returns>
     </member>
     <member name="M:BattleDiceCardModel.OnRoundEnd">
-      <summary></summary>
+      <summary>幕の終了時に呼び出されます。</summary>
     </member>
     <member name="M:BattleDiceCardModel.OnRoundStart">
-      <summary></summary>
+      <summary>幕の開始時に呼び出されます。</summary>
     </member>
     <member name="M:BattleDiceCardModel.OnUseCard(BattleUnitModel)">
       <summary></summary>
@@ -428,7 +428,7 @@
       <summary></summary>
     </member>
     <member name="F:BattleUnitBuf.stack">
-      <summary></summary>
+      <summary>バフのスタック数</summary>
     </member>
     <member name="M:BattleUnitBuf.#ctor">
       <summary></summary>
@@ -468,7 +468,7 @@
       <returns></returns>
     </member>
     <member name="M:BattleUnitBuf.Destroy">
-      <summary></summary>
+      <summary>次の幕からこのバフを破棄します。</summary>
     </member>
     <member name="M:BattleUnitBuf.DirectAttack">
       <summary></summary>
@@ -575,7 +575,7 @@
       <returns></returns>
     </member>
     <member name="M:BattleUnitBuf.OnAddBuf">
-      <summary></summary>
+      <summary>このバフが付与された時に呼び出されます。</summary>
     </member>
     <member name="M:BattleUnitBuf.OnAfterRollSpeedDice">
       <summary></summary>
@@ -634,10 +634,10 @@
       <summary></summary>
     </member>
     <member name="M:BattleUnitBuf.OnRoundEnd">
-      <summary></summary>
+      <summary>幕の終了時に呼び出されます。</summary>
     </member>
     <member name="M:BattleUnitBuf.OnRoundEndTheLast">
-      <summary></summary>
+      <summary>幕の終了時、 <see ref="OnRoundEnd"/> の後に呼び出されます。</summary>
     </member>
     <member name="M:BattleUnitBuf.OnRoundStart">
       <summary>幕の開始時に呼び出されます。</summary>
@@ -654,9 +654,9 @@
       <param name="behavior"></param>
     </member>
     <member name="M:BattleUnitBuf.OnTakeDamageByAttack(BattleDiceBehavior,System.Int32)">
-      <summary></summary>
-      <param name="atkDice"></param>
-      <param name="dmg"></param>
+      <summary>攻撃によるダメージを受けた時に呼び出されます。</summary>
+      <param name="atkDice">攻撃に使用されているバトル ダイスに対するビヘイビア (振る舞いを操作するオブジェクト)。</param>
+      <param name="dmg">被ダメージ量。</param>
     </member>
     <member name="M:BattleUnitBuf.OnUseCard(BattlePlayingCardDataInUnitModel)">
       <summary></summary>
@@ -806,8 +806,8 @@
       <returns></returns>
     </member>
     <member name="M:BattleUnitBufListDetail.GetActivatedBufList">
-      <summary></summary>
-      <returns></returns>
+      <summary>この幕に適用されているバフの一覧を取得します。</summary>
+      <returns>この幕に適用されているバフの一覧。</returns>
     </member>
     <member name="M:BattleUnitBufListDetail.GetBreakDamageReduction(LOR_DiceSystem.BehaviourDetail)">
       <summary></summary>
@@ -988,16 +988,16 @@
       <param name="card"></param>
     </member>
     <member name="M:BattleUnitBufListDetail.RemoveBuf(BattleUnitBuf)">
-      <summary></summary>
-      <param name="buf"></param>
+      <summary>指定したバフがこのキャラクターに付与されている場合、最初に出現したものを削除します。</summary>
+      <param name="buf">削除するバフ オブジェクト。</param>
     </member>
     <member name="M:BattleUnitBufListDetail.RemoveBufAll(System.Type)">
-      <summary></summary>
-      <param name="buf"></param>
+      <summary>指定した型に一致するバフをこのキャラクターから全て削除します。</summary>
+      <param name="buf">削除するバフの型。</param>
     </member>
     <member name="M:BattleUnitBufListDetail.RemoveBufAll(KeywordBuf)">
-      <summary></summary>
-      <param name="bufType"></param>
+      <summary>指定したキーワードに一致するバフをこのキャラクターから全て削除します。</summary>
+      <param name="bufType">削除するバフのキーワード。</param>
     </member>
     <member name="M:BattleUnitBufListDetail.RemoveBufAll(BufPositiveType)">
       <summary></summary>
@@ -1027,7 +1027,7 @@
       <summary></summary>
     </member>
     <member name="F:BattleUnitModel.breakDetail">
-      <summary></summary>
+      <summary>混乱耐性</summary>
     </member>
     <member name="F:BattleUnitModel.bufListDetail">
       <summary>付与されたバフの一覧</summary>
@@ -1580,13 +1580,13 @@
       <param name="card"></param>
     </member>
     <member name="M:BattleUnitModel.TakeBreakDamage(System.Int32,BattleUnitModel,AtkResist)">
-      <summary></summary>
-      <param name="damage"></param>
-      <param name="attacker"></param>
-      <param name="atkResist"></param>
+      <summary>指定した値だけこのキャラクターが混乱ダメージを受けます。</summary>
+      <param name="damage">混乱ダメージ量。</param>
+      <param name="attacker">攻撃を行ったキャラクター。</param>
+      <param name="atkResist">混乱ダメージに対する属性耐性。</param>
     </member>
     <member name="M:BattleUnitModel.TakeDamage(System.Int32,BattleUnitModel,System.Boolean)">
-      <summary>指定した値だけダメージを受けます。</summary>
+      <summary>指定した値だけこのキャラクターがダメージを受けます。</summary>
       <param name="v">ダメージ量。</param>
       <param name="attacker">攻撃を行ったキャラクター。</param>
       <param name="isAdditionalDmg"></param>
@@ -3053,10 +3053,10 @@
       <summary></summary>
     </member>
     <member name="M:PassiveAbilityBase.OnRoundEnd">
-      <summary></summary>
+      <summary>幕の終了時に呼び出されます。</summary>
     </member>
     <member name="M:PassiveAbilityBase.OnRoundEndTheLast">
-      <summary></summary>
+      <summary>幕の終了時、 <see ref="OnRoundEnd"/> の後に呼び出されます。</summary>
     </member>
     <member name="M:PassiveAbilityBase.OnRoundEndTheLast_ignoreDead">
       <summary></summary>
