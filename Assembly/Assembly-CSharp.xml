@@ -425,7 +425,7 @@
       <summary>バフの所有キャラクター</summary>
     </member>
     <member name="F:BattleUnitBuf.hide">
-      <summary></summary>
+      <summary>バフのアイコンを非表示にする事を示す値</summary>
     </member>
     <member name="F:BattleUnitBuf.stack">
       <summary>バフのスタック数</summary>
@@ -686,7 +686,7 @@
       <summary></summary>
     </member>
     <member name="P:BattleUnitBuf.Hide">
-      <summary></summary>
+      <summary>バフのアイコンを非表示にする事を示す値を取得します。</summary>
     </member>
     <member name="P:BattleUnitBuf.IsControlable">
       <summary></summary>
@@ -851,8 +851,8 @@
       <returns></returns>
     </member>
     <member name="M:BattleUnitBufListDetail.GetReadyBufList">
-      <summary></summary>
-      <returns></returns>
+      <summary>次の幕から適用するバフの一覧を取得します。</summary>
+      <returns>次の幕から適用するバフの一覧。</returns>
     </member>
     <member name="M:BattleUnitBufListDetail.GetResistBP(AtkResist,LOR_DiceSystem.BehaviourDetail)">
       <summary></summary>
@@ -2309,11 +2309,11 @@
       <param name="target"></param>
     </member>
     <member name="M:DiceCardAbilityBase.OnSucceedAttack">
-      <summary></summary>
+      <summary>攻撃の的中時に呼び出されます。</summary>
     </member>
     <member name="M:DiceCardAbilityBase.OnSucceedAttack(BattleUnitModel)">
-      <summary></summary>
-      <param name="target"></param>
+      <summary>攻撃の的中時に呼び出されます。</summary>
+      <param name="target">攻撃対象のキャラクター。</param>
     </member>
     <member name="M:DiceCardAbilityBase.OnWinParrying">
       <summary></summary>
@@ -2372,9 +2372,9 @@
       <summary></summary>
     </member>
     <member name="M:DiceCardSelfAbilityBase.OnChooseCard(BattleUnitModel)">
-      <summary></summary>
-      <param name="owner"></param>
-      <returns></returns>
+      <summary>手札からこのバトルページを選択しようとした時に呼び出されます。</summary>
+      <param name="owner">バトルページを選択しようとしたキャラクター。</param>
+      <returns>このバトルページを選択できる場合は true、選択できない場合は false を返します。</returns>
     </member>
     <member name="M:DiceCardSelfAbilityBase.OnDiscard(BattleUnitModel,BattleDiceCardModel)">
       <summary></summary>
@@ -2410,7 +2410,7 @@
       <summary></summary>
     </member>
     <member name="M:DiceCardSelfAbilityBase.OnSucceedAttack">
-      <summary></summary>
+      <summary>攻撃の的中時に呼び出されます。</summary>
     </member>
     <member name="M:DiceCardSelfAbilityBase.OnSucceedDefense">
       <summary></summary>
@@ -3093,7 +3093,7 @@
       <param name="attackerCard"></param>
     </member>
     <member name="M:PassiveAbilityBase.OnSucceedAttack(BattleDiceBehavior)">
-      <summary>攻撃の命中時に呼び出されます。</summary>
+      <summary>攻撃の的中時に呼び出されます。</summary>
       <param name="behavior">攻撃に使用されているバトル ダイスに対するビヘイビア (振る舞いを操作するオブジェクト)。</param>
     </member>
     <member name="M:PassiveAbilityBase.OnSucceedAttackEvent(BattleDiceBehavior)">
