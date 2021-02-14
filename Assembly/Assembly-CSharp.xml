@@ -28,6 +28,256 @@
     <member name="F:AtkResist.Weak">
       <summary>弱点 (1.5倍)</summary>
     </member>
+    <member name="T:BattleCardTotalResult">
+      <summary>バトル ページによって適用された効果の結果を格納します。</summary>
+    </member>
+    <member name="F:BattleCardTotalResult.endCardActionEvent">
+      <summary></summary>
+    </member>
+    <member name="F:BattleCardTotalResult.playingCard">
+      <summary></summary>
+    </member>
+    <member name="F:BattleCardTotalResult.prevBehaviour">
+      <summary></summary>
+    </member>
+    <member name="F:BattleCardTotalResult.useCardEvent">
+      <summary></summary>
+    </member>
+    <member name="F:BattleCardTotalResult.usedCard">
+      <summary></summary>
+    </member>
+    <member name="F:BattleCardTotalResult.usedDiceList">
+      <summary></summary>
+    </member>
+    <member name="M:BattleCardTotalResult.#ctor(BattlePlayingCardDataInUnitModel)">
+      <summary></summary>
+      <param name="playingCard"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.AddBufEffect(System.String)">
+      <summary></summary>
+      <param name="src"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.AddEmotionCoin(EmotionCoinType,System.Int32)">
+      <summary></summary>
+      <param name="coinType"></param>
+      <param name="count"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.ApplyCreatureEffect(Battle.CreatureEffect.CreatureEffect)">
+      <summary></summary>
+      <param name="effect"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.CompareDiceBehavioursUI(System.Collections.Generic.List{BattleDiceBehaviourUI},CompareBehaviourUIType)">
+      <summary></summary>
+      <param name="behaviours"></param>
+      <param name="type"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.GetBehavioursDiceState(CompareBehaviourUIType)">
+      <summary></summary>
+      <param name="type"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleCardTotalResult.InitNextBehaviour">
+      <summary></summary>
+    </member>
+    <member name="M:BattleCardTotalResult.SetAfterActionEvent(BattleCardBehaviourResult.BehaviourEvent)">
+      <summary></summary>
+      <param name="e"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetAttackEffectFilter(System.Type)">
+      <summary></summary>
+      <param name="filter"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetBehaviour(BattleDiceBehavior)">
+      <summary></summary>
+      <param name="behaviour"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetBehaviourDiceResultUI(CompareBehaviourUIType)">
+      <summary></summary>
+      <param name="type"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetBehaviourResult(DiceBehaviourResultData)">
+      <summary></summary>
+      <param name="result"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetBreakDmgGiven(System.Int32)">
+      <summary></summary>
+      <param name="breakDmg"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetBreakDmgTaken(System.Int32,LOR_DiceSystem.BehaviourDetail,AtkResist)">
+      <summary></summary>
+      <param name="breakDmg"></param>
+      <param name="detail"></param>
+      <param name="atkResist"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetBreakState(System.Boolean)">
+      <summary></summary>
+      <param name="isBreaked"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetBufs(BattleUnitBuf)">
+      <summary></summary>
+      <param name="buf"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetCreatureAbilityEffect(System.String,System.Single)">
+      <summary></summary>
+      <param name="resPath"></param>
+      <param name="time"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetCreatureEffectSound(System.String)">
+      <summary></summary>
+      <param name="src"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetCurrentBreakGauge(System.Int32)">
+      <summary></summary>
+      <param name="breakGauge"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetCurrentBuf(BattleBufUIDataList)">
+      <summary></summary>
+      <param name="bufDataList"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetCurrentHp(System.Single)">
+      <summary></summary>
+      <param name="curHp"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetDamageGiven(System.Int32)">
+      <summary></summary>
+      <param name="dmg"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetDamageTaken(System.Int32,System.Int32,LOR_DiceSystem.BehaviourDetail,AtkResist)">
+      <summary></summary>
+      <param name="dmg"></param>
+      <param name="maxValue"></param>
+      <param name="detail"></param>
+      <param name="atkResist"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetDeathState(System.Boolean)">
+      <summary></summary>
+      <param name="isDead"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetDiceBehaviourAbility(System.Boolean,BattleDiceBehavior,BattleDiceCardModel)">
+      <summary></summary>
+      <param name="activateByResult"></param>
+      <param name="diceBehaviour"></param>
+      <param name="cardModel"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetDiceDestroyed(System.Boolean)">
+      <summary></summary>
+      <param name="b"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetDiceTypeBonus(System.Int32)">
+      <summary></summary>
+      <param name="value"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetEmotionAbility(BattleEmotionCardModel)">
+      <summary></summary>
+      <param name="emotionPassive"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetEmotionAbility(System.Boolean,BattleEmotionCardModel,System.Int32,ResultOption,System.Int32[])">
+      <summary></summary>
+      <param name="activateByResult"></param>
+      <param name="emotionPassive"></param>
+      <param name="index"></param>
+      <param name="option"></param>
+      <param name="param"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetEmotionAbilityEffect(System.String)">
+      <summary></summary>
+      <param name="resPath"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetEndCardActionEvent(BattleCardBehaviourResult.BehaviourEvent)">
+      <summary></summary>
+      <param name="e"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetGift(GiftModel)">
+      <summary></summary>
+      <param name="gift"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetNewBufs(BattleUnitBuf)">
+      <summary></summary>
+      <param name="buf"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetParam(System.Int32)">
+      <summary></summary>
+      <param name="param"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetPassiveAbility(PassiveAbilityBase)">
+      <summary>指定したパッシブを適用された効果として追加します。</summary>
+      <param name="passive">追加するパッシブ。</param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetPassiveAbilityDesc(System.String)">
+      <summary></summary>
+      <param name="desc"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetPrintDamagedEffectEvent(BattleCardBehaviourResult.BehaviourEvent)">
+      <summary></summary>
+      <param name="e"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetPrintEffectEvent(BattleCardBehaviourResult.BehaviourEvent)">
+      <summary></summary>
+      <param name="e"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetRecoveredBp(System.Int32)">
+      <summary></summary>
+      <param name="amount"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetRecoveredHp(System.Int32)">
+      <summary></summary>
+      <param name="amount"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetRecoveredLight(System.Int32)">
+      <summary></summary>
+      <param name="amount"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetResultDiceFace(System.Int32,System.Int32)">
+      <summary></summary>
+      <param name="min"></param>
+      <param name="face"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetResultDiceValue(System.Int32)">
+      <summary></summary>
+      <param name="value"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetRolldiceEvent(BattleCardBehaviourResult.BehaviourEvent)">
+      <summary></summary>
+      <param name="e"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetSkip(DiceUITiming)">
+      <summary></summary>
+      <param name="timing"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetSucceedAtkEvent(BattleCardBehaviourResult.BehaviourEvent)">
+      <summary></summary>
+      <param name="e"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetSucceedDefEvent(BattleCardBehaviourResult.BehaviourEvent)">
+      <summary></summary>
+      <param name="e"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetTakeDamagedEvent(BattleCardBehaviourResult.BehaviourEvent)">
+      <summary></summary>
+      <param name="e"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetUseCardEvent(BattleCardBehaviourResult.BehaviourEvent)">
+      <summary></summary>
+      <param name="e"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetVanillaDiceFace(System.Int32,System.Int32)">
+      <summary></summary>
+      <param name="min"></param>
+      <param name="max"></param>
+    </member>
+    <member name="M:BattleCardTotalResult.SetVanillaDiceValue(System.Int32)">
+      <summary></summary>
+      <param name="value"></param>
+    </member>
+    <member name="P:BattleCardTotalResult.BehaviourResultList">
+      <summary></summary>
+    </member>
+    <member name="P:BattleCardTotalResult.BehaviourResultQueue">
+      <summary></summary>
+    </member>
+    <member name="P:BattleCardTotalResult.CurbehaviourResult">
+      <summary></summary>
+    </member>
     <member name="T:BattleDiceBehavior">
       <summary>バトル ダイスの振る舞いを操作する機能を提供します。</summary>
     </member>
@@ -457,6 +707,189 @@
     <member name="P:BattleDiceCardModel.XmlData">
       <summary></summary>
     </member>
+    <member name="T:BattleObjectManager">
+      <summary>バトル キャラクターなどのオブジェクトを管理します。</summary>
+    </member>
+    <member name="M:BattleObjectManager.#ctor">
+      <summary></summary>
+    </member>
+    <member name="M:BattleObjectManager.Clear">
+      <summary></summary>
+    </member>
+    <member name="M:BattleObjectManager.CreateDefaultUnit(Faction)">
+      <summary></summary>
+      <param name="faction"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleObjectManager.ExistsUnit(System.Predicate{BattleUnitModel})">
+      <summary></summary>
+      <param name="match"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleObjectManager.GetAccumulatedEmotionCoinAvr(Faction)">
+      <summary></summary>
+      <param name="faction"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleObjectManager.GetAccumulatedEmotionCoinSum(Faction)">
+      <summary></summary>
+      <param name="faction"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleObjectManager.GetAliveList">
+      <summary>敵味方を含めた現在の生存キャラクターを取得します。</summary>
+      <returns>敵味方を含めた現在の生存キャラクターのコレクション。</returns>
+    </member>
+    <member name="M:BattleObjectManager.GetAliveList(Faction)">
+      <summary>指定した派閥に所属する現在の生存キャラクターを取得します。</summary>
+      <param name="faction">取得する敵または味方の派閥。</param>
+      <returns>指定した派閥に所属する現在の生存キャラクターのコレクション。</returns>
+    </member>
+    <member name="M:BattleObjectManager.GetAliveList_opponent(Faction)">
+      <summary>指定した派閥の相手側の派閥に所属する現在の生存キャラクターを取得します。</summary>
+      <param name="faction">取得する敵または味方の派閥。</param>
+      <returns>指定した派閥の相手側の派閥に所属する現在の生存キャラクターのコレクション</returns>
+    </member>
+    <member name="M:BattleObjectManager.GetAliveList_random(Faction,System.Int32)">
+      <summary></summary>
+      <param name="faction"></param>
+      <param name="count"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleObjectManager.GetAliveListExceptFaction(Faction)">
+      <summary></summary>
+      <param name="faction"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleObjectManager.GetAliveListWithAvailable(Faction)">
+      <summary></summary>
+      <param name="faction"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleObjectManager.GetAverageHP">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleObjectManager.GetAverageHP(Faction)">
+      <summary></summary>
+      <param name="faction"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleObjectManager.GetEmotionGaugeMax">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleObjectManager.GetFarOppositeTarget(BattleUnitModel)">
+      <summary></summary>
+      <param name="actor"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleObjectManager.GetFriendlyAllList(Faction)">
+      <summary></summary>
+      <param name="faction"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleObjectManager.GetLevelUpList(Faction)">
+      <summary></summary>
+      <param name="faction"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleObjectManager.GetList">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleObjectManager.GetList(Faction)">
+      <summary></summary>
+      <param name="faction"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleObjectManager.GetList(System.Predicate{BattleUnitModel})">
+      <summary></summary>
+      <param name="match"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleObjectManager.GetNearOppositeTarget(BattleUnitModel)">
+      <summary></summary>
+      <param name="actor"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleObjectManager.GetNearRandomTarget(BattleUnitModel)">
+      <summary></summary>
+      <param name="actor"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleObjectManager.GetRandomTarget">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleObjectManager.GetRandomTarget(Faction)">
+      <summary></summary>
+      <param name="faction"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleObjectManager.GetTargetByCard(BattleUnitModel,BattleDiceCardModel,System.Int32,System.Boolean)">
+      <summary></summary>
+      <param name="actor"></param>
+      <param name="card"></param>
+      <param name="idx"></param>
+      <param name="teamkill"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleObjectManager.GetTargetByCardForPlayer(BattleUnitModel,BattleDiceCardModel,System.Int32,System.Boolean)">
+      <summary></summary>
+      <param name="actor"></param>
+      <param name="card"></param>
+      <param name="idx"></param>
+      <param name="teamkill"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleObjectManager.GetTargetByIndex(System.Int32)">
+      <summary></summary>
+      <param name="index"></param>
+      <returns></returns>
+    </member>
+    <member name="M:BattleObjectManager.GetTotalHP">
+      <summary></summary>
+      <returns></returns>
+    </member>
+    <member name="M:BattleObjectManager.Init_only">
+      <summary></summary>
+    </member>
+    <member name="M:BattleObjectManager.InitBehaviorTree(BattleUnitModel)">
+      <summary></summary>
+      <param name="model"></param>
+    </member>
+    <member name="M:BattleObjectManager.InitUI">
+      <summary></summary>
+    </member>
+    <member name="M:BattleObjectManager.OnFixedUpdate(System.Single)">
+      <summary></summary>
+      <param name="deltaTime"></param>
+    </member>
+    <member name="M:BattleObjectManager.OnUpdate">
+      <summary></summary>
+    </member>
+    <member name="M:BattleObjectManager.RegisterUnit(BattleUnitModel)">
+      <summary></summary>
+      <param name="unit"></param>
+    </member>
+    <member name="M:BattleObjectManager.SetSettingData(BattleUnitModel,UnitSetterRemake)">
+      <summary></summary>
+      <param name="model"></param>
+      <param name="setter"></param>
+    </member>
+    <member name="M:BattleObjectManager.UnregisterUnit(BattleUnitModel)">
+      <summary></summary>
+      <param name="unit"></param>
+    </member>
+    <member name="M:BattleObjectManager.UnregisterUnitByIndex(Faction,System.Int32)">
+      <summary></summary>
+      <param name="faction"></param>
+      <param name="index"></param>
+    </member>
+    <member name="P:BattleObjectManager.instance">
+      <summary>このクラスの既定のインスタンスを取得します。</summary>
+    </member>
     <member name="T:BattleUnitBuf">
       <summary>キャラクターに付与するバフを表します。</summary>
     </member>
@@ -632,9 +1065,9 @@
       <returns></returns>
     </member>
     <member name="M:BattleUnitBuf.IsImmune(KeywordBuf)">
-      <summary></summary>
-      <param name="buf"></param>
-      <returns></returns>
+      <summary>指定されたバフに対して耐性を持っていることを表す値を取得します。</summary>
+      <param name="buf">耐性情報を取得するバフ。</param>
+      <returns>指定されたバフに対して耐性である場合は true、そうでない場合は false。</returns>
     </member>
     <member name="M:BattleUnitBuf.IsImmune(BattleUnitBuf)">
       <summary></summary>
@@ -1281,7 +1714,7 @@
       <summary></summary>
     </member>
     <member name="F:BattleUnitModel.battleCardResultLog">
-      <summary></summary>
+      <summary>バトル ページによって適用された効果の結果ログを取得します。</summary>
     </member>
     <member name="F:BattleUnitModel.breakDetail">
       <summary>混乱耐性</summary>
@@ -2780,9 +3213,9 @@
       <summary></summary>
     </member>
     <member name="M:DiceCardSelfAbilityBase.OnChooseCard(BattleUnitModel)">
-      <summary>手札からこのバトルページを選択しようとした時に呼び出されます。</summary>
-      <param name="owner">バトルページを選択しようとしたキャラクター。</param>
-      <returns>このバトルページを選択できる場合は true、選択できない場合は false を返します。</returns>
+      <summary>手札からこのバトル ページを選択しようとした時に呼び出されます。</summary>
+      <param name="owner">バトル ページを選択しようとしたキャラクター。</param>
+      <returns>このバトル ページを選択できる場合は true、選択できない場合は false を返します。</returns>
     </member>
     <member name="M:DiceCardSelfAbilityBase.OnDiscard(BattleUnitModel,BattleDiceCardModel)">
       <summary></summary>
@@ -2901,10 +3334,10 @@
       <summary>敵または味方の派閥を表します。</summary>
     </member>
     <member name="F:Faction.Enemy">
-      <summary>敵</summary>
+      <summary>敵 (NPC)</summary>
     </member>
     <member name="F:Faction.Player">
-      <summary>味方</summary>
+      <summary>味方 (プレイヤー)</summary>
     </member>
     <member name="T:GiftInventory">
       <summary>戦闘表象のインベントリです。このオブジェクトは保存可能です。</summary>
@@ -3105,7 +3538,7 @@
       <summary></summary>
     </member>
     <member name="F:KeywordBuf.None">
-      <summary>バフなし</summary>
+      <summary>キーワード指定なしのバフ (カスタム バフ)</summary>
     </member>
     <member name="F:KeywordBuf.NullifyPower">
       <summary>威力無効化 (今回の幕の間、威力の影響を受けない)</summary>
@@ -3216,7 +3649,7 @@
       <summary></summary>
     </member>
     <member name="F:KeywordBuf.WarpCharge">
-      <summary>充電 (充電の数値によって特定バトルページの能力が上昇。最大 10 まで獲得可能)</summary>
+      <summary>充電 (充電の数値によって特定バトル ページの能力が上昇。最大 10 まで獲得可能)</summary>
     </member>
     <member name="F:KeywordBuf.Weak">
       <summary>虚弱 (今回の幕の間、攻撃ダイスの威力 -X)</summary>
@@ -3414,9 +3847,9 @@
       <returns></returns>
     </member>
     <member name="M:PassiveAbilityBase.IsImmune(KeywordBuf)">
-      <summary></summary>
-      <param name="buf"></param>
-      <returns></returns>
+      <summary>指定されたバフに対して耐性を持っていることを表す値を取得します。</summary>
+      <param name="buf">耐性情報を取得するバフ。</param>
+      <returns>指定されたバフに対して耐性である場合は true、そうでない場合は false。</returns>
     </member>
     <member name="M:PassiveAbilityBase.IsImmuneBreakDmg(DamageType)">
       <summary></summary>
@@ -3443,10 +3876,10 @@
       <returns></returns>
     </member>
     <member name="M:PassiveAbilityBase.OnAddKeywordBufByCard(BattleUnitBuf,System.Int32)">
-      <summary></summary>
-      <param name="buf"></param>
-      <param name="stack"></param>
-      <returns></returns>
+      <summary>このパッシブの所有キャラクターにバトル ページによってバフが付与された場合に呼び出されます。</summary>
+      <param name="buf">付与されたバフ。</param>
+      <param name="stack">付与されたバフのスタック数。</param>
+      <returns>付与されたバフに追加するスタック数の増分。</returns>
     </member>
     <member name="M:PassiveAbilityBase.OnAddKeywordBufByCardForEvent(KeywordBuf,System.Int32,BufReadyType)">
       <summary></summary>
@@ -3833,11 +4266,11 @@
       <param name="max">返される乱数の上限値。この数値は乱数に含まれます。</param>
       <returns> 以上  以下の単精度浮動小数点数。</returns>
     </member>
-    <member name="M:RandomUtil.SelectOne``1()">
-      <summary>指定した配列リストからランダムに要素を一つ選択して返します。</summary>
-      <typeparam name="T">配列リストの要素の型。</typeparam>
-      <param name="list">選択対象となる配列リスト。</param>
-      <returns> に含まれている要素。</returns>
+    <member name="M:RandomUtil.SelectOne``1(T[])">
+      <summary></summary>
+      <typeparam name="T"></typeparam>
+      <param name="list"></param>
+      <returns></returns>
     </member>
     <member name="M:RandomUtil.SelectOne``1(System.Collections.Generic.List{``0})">
       <summary>指定したリストからランダムに要素を一つ選択して返します。</summary>
@@ -3845,7 +4278,7 @@
       <param name="list">選択対象となるリスト。</param>
       <returns> に含まれている要素。</returns>
     </member>
-    <member name="M:RandomUtil.SelectOne``1(,System.Single[])">
+    <member name="M:RandomUtil.SelectOne``1(T[],System.Single[])">
       <summary></summary>
       <typeparam name="T"></typeparam>
       <param name="list"></param>
