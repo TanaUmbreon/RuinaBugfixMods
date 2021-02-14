@@ -1142,7 +1142,7 @@
       <summary></summary>
     </member>
     <member name="M:BattleUnitBuf.OnEndParrying">
-      <summary></summary>
+      <summary>バトル ページによるマッチが終了した時に呼び出されます。</summary>
     </member>
     <member name="M:BattleUnitBuf.OnFriendTakeDamageByAttack(BattleDiceBehavior,System.Int32)">
       <summary></summary>
@@ -1202,8 +1202,8 @@
       <summary></summary>
     </member>
     <member name="M:BattleUnitBuf.OnStartParrying(BattlePlayingCardDataInUnitModel)">
-      <summary></summary>
-      <param name="card"></param>
+      <summary>バトル ページによるマッチが開始される時に呼び出されます。</summary>
+      <param name="card">このバフ所有キャラクターがマッチに使用するバトル ページ。</param>
     </member>
     <member name="M:BattleUnitBuf.OnSuccessAttack(BattleDiceBehavior)">
       <summary></summary>
@@ -3246,7 +3246,7 @@
       <summary></summary>
     </member>
     <member name="M:DiceCardSelfAbilityBase.OnStartParrying">
-      <summary></summary>
+      <summary>バトル ページによるマッチが開始される時に呼び出されます。</summary>
     </member>
     <member name="M:DiceCardSelfAbilityBase.OnSucceedAreaAttack(BattleUnitModel)">
       <summary></summary>
@@ -3942,14 +3942,14 @@
       <summary></summary>
     </member>
     <member name="M:PassiveAbilityBase.OnEndOneSideVictim(BattlePlayingCardDataInUnitModel)">
-      <summary></summary>
-      <param name="attackerCard"></param>
+      <summary>バトル ページによる一方攻撃が終了した時に呼び出されます。</summary>
+      <param name="attackerCard">攻撃キャラクターが使用したバトル ページ。</param>
     </member>
     <member name="M:PassiveAbilityBase.OnEndParrying">
-      <summary></summary>
+      <summary>バトル ページによるマッチが終了した時に呼び出されます。</summary>
     </member>
     <member name="M:PassiveAbilityBase.OnEndParrying(BattlePlayingCardDataInUnitModel)">
-      <summary></summary>
+      <summary>バトル ページによるマッチが終了した時に呼び出されます。</summary>
       <param name="curCard"></param>
     </member>
     <member name="M:PassiveAbilityBase.OnExhaustBullet">
@@ -4039,16 +4039,16 @@
       <param name="card"></param>
     </member>
     <member name="M:PassiveAbilityBase.OnStartParrying(BattlePlayingCardDataInUnitModel)">
-      <summary></summary>
-      <param name="card"></param>
+      <summary>バトル ページによるマッチが開始される時に呼び出されます。</summary>
+      <param name="card">このパッシブ所有キャラクターがマッチに使用するバトル ページ。</param>
     </member>
     <member name="M:PassiveAbilityBase.OnStartTargetedByAreaAtk(BattlePlayingCardDataInUnitModel)">
       <summary></summary>
       <param name="attackerCard"></param>
     </member>
     <member name="M:PassiveAbilityBase.OnStartTargetedOneSide(BattlePlayingCardDataInUnitModel)">
-      <summary></summary>
-      <param name="attackerCard"></param>
+      <summary>バトル ページによる一方攻撃が開始される時に呼び出されます。</summary>
+      <param name="attackerCard">攻撃キャラクターが使用するバトル ページ。</param>
     </member>
     <member name="M:PassiveAbilityBase.OnSucceedAttack(BattleDiceBehavior)">
       <summary>攻撃の的中時に呼び出されます。</summary>
