@@ -352,4 +352,5 @@ MigrationBackup/
 # カスタム設定
 launchSettings.json
 Assembly/*.dll
+Assembly/0Harmony.xml
 RuinaBugfixMods-bin-x.x.x/

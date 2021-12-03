@@ -2,5 +2,8 @@
 
 0Harmony.dll
 Assembly-CSharp.dll
-BaseMod.dll
+BongBongEnterprises.dll
+Mono.Cecil.dll
+MonoMod.RuntimeDetour.dll
+MonoMod.Utils.dll
 UnityEngine.CoreModule.dll

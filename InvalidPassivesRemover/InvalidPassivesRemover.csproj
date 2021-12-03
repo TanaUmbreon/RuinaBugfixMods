@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>InvalidPassivesRemover</RootNamespace>
     <AssemblyName>InvalidPassivesRemover</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,8 +40,20 @@
       <HintPath>..\Assembly\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="BaseMod">
-      <HintPath>..\Assembly\BaseMod.dll</HintPath>
+    <Reference Include="BongBongEnterprises">
+      <HintPath>..\Assembly\BongBongEnterprises.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\Assembly\Mono.Cecil.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour">
+      <HintPath>..\Assembly\MonoMod.RuntimeDetour.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MonoMod.Utils">
+      <HintPath>..\Assembly\MonoMod.Utils.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -54,9 +67,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DebugSupportExtensions.cs" />
     <Compile Include="Harmony_Patch.cs" />
     <Compile Include="Log.cs" />
+    <Compile Include="PrivateAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -76,7 +89,7 @@ mkdir "%25ExportDir%25"
 xcopy "$(SolutionDir)README(ja).txt" "%25ExportDir%25" /y
 
 :: MOD本体
-set ModDir=%25ExportDir%25Z_$(ProjectName)
+set ModDir=%25ExportDir%25$(ProjectName)
 mkdir "%25ModDir%25"
 xcopy "$(TargetPath)" "%25ModDir%25" /y
 

@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30804.86
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.31903.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModAddedGiftsRemover", "ModAddedGiftsRemover\ModAddedGiftsRemover.csproj", "{D4354135-256D-4C47-AAD2-F8A38C931910}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvalidGiftsRemover", "InvalidGiftsRemover\InvalidGiftsRemover.csproj", "{D4354135-256D-4C47-AAD2-F8A38C931910}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvalidPassivesRemover", "InvalidPassivesRemover\InvalidPassivesRemover.csproj", "{DAA8099A-BB18-4E43-948D-1F6ADC258FAD}"
 EndProject
