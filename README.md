@@ -20,9 +20,3 @@
 ## ダウンロード・リリースノート
 
 [「Releases」ページ](https://github.com/TanaUmbreon/RuinaBugfixMods/releases) を参照してください。
-
-
-## ダウンロード方法
-
-1. [「Releases」ページ](https://github.com/TanaUmbreon/RuinaBugfixMods/releases) を開きます。
-2. 最新バージョンの「Assets」から「RuinaBugfixMods-bin-*x*.*x*.*x*.zip」をクリックしてダウンロードしてください。
