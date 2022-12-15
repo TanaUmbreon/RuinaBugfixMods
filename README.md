@@ -1,6 +1,6 @@
 # Ruina Bugfix MODs
 
-ゲーム「[Library Of Ruina](https://store.steampowered.com/app/1256670/Library_Of_Ruina/)」のMOD第1弾です。他のMODを利用することで発生することがあるバグを修正します。
+ゲーム「[Library Of Ruina](https://store.steampowered.com/app/1256670/Library_Of_Ruina/)」のMOD旧第1弾です。他のMODを利用することで発生することがあるバグを修正します。
 
 ***注意!! このバージョンは本体のアーリーアクセス時代のバージョンに対応していたMODです。正式リリース以降のバージョンでの使用は想定していません。***
 
