@@ -2,6 +2,8 @@
 
 ゲーム「[Library Of Ruina](https://store.steampowered.com/app/1256670/Library_Of_Ruina/)」のMOD第1弾です。他のMODを利用することで発生することがあるバグを修正します。
 
+***注意!! このバージョンは本体のアーリーアクセス時代のバージョンに対応していたMODです。正式リリース以降のバージョンでの使用は想定していません。***
+
 以下の通り、修正機能ごとにMODを分割しています。
 
 - Invalid Gifts Remover (InvalidGiftsRemover.dll)
